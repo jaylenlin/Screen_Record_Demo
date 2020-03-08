@@ -5,8 +5,8 @@ int main(int argc, char *argv[])
 {
     Logger logger;
     av_register_all();
-    avcodec_register_all();
-    avformat_network_init();
+    // avcodec_register_all();
+    // avformat_network_init();
     Q_UNUSED(logger);
     QApplication a(argc, argv);
     MainTest w;

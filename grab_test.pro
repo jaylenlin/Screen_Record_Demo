@@ -33,6 +33,7 @@ HEADERS  += maintest.h \
 FORMS    += maintest.ui
 
 DEFINES += SSR_USE_X86_ASM=1 SSR_USE_FFMPEG_VERSIONS=1
-LIBS += -lX11 -lXext -lXfixes -lasound -lavformat -lavcodec -lavutil -lswscale
+LIBS += -lX11 -lXext -lXfixes -lavformat -lavcodec -lavutil -lswscale
+#LIBS += -lX11 -lXext -lXfixes -lasound -lavformat -lavcodec -lavutil -lswscale
 LIBS += -L/home/domon/ffmpeg_build/lib
 INCLUDEPATH += /home/domon/ffmpeg_build/include AV AV/Input AV/Output

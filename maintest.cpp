@@ -13,7 +13,7 @@ MainTest::MainTest(QWidget *parent) :
     m_video_frame_rate = 25;
     m_output_settings.container_avname="matroska";
     m_output_settings.video_codec_avname="libx264";
-    m_output_settings.file="/tmp/test.mkv";
+    m_output_settings.file="./test.mkv";
     m_output_settings.video_frame_rate=25;
     m_output_settings.video_kbit_rate=5000;
 }
