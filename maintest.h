@@ -46,7 +46,7 @@ private:
     void PushVideoFrame();
     bool m_grabbing, m_selecting_window, m_should_stop;
     std::thread m_thread;
-    std::unique_ptr<QRubberBand> m_rubber_band, m_recording_frame;
+    std::unique_ptr<QRubberBand> m_rubber_band;
     QRect m_ret,m_rubber_band_rect, m_select_window_outer_rect, m_select_window_inner_rect;
     uint32_t m_video_frame_rate;
 
@@ -54,6 +54,9 @@ private:
     OutputSettings m_output_settings;
     std::unique_ptr<Muxer> m_muxer;
     VideoEncoder *m_video_encoder;
+
+//    ConfCallService m_call_service;
+
 
 private slots:
 

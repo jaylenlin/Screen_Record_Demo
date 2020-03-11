@@ -11,9 +11,12 @@ MainTest::MainTest(QWidget *parent) :
     ui->setupUi(this);
     m_should_stop = true;
     m_video_frame_rate = 25;
-    m_output_settings.container_avname="matroska";
+
+//    m_call_service.Init("student", 2, "CIffw5nlrJQuEIffw5nlrJQuGhgXSn8mOCdJJBkC0VdkVeMhJpNeCMtzH7wiGEBasx8jCiBw13KNc52StRnZu0jOhCPpIyoNJgEAB22ih7+5lk1oxTIA");
+
+    m_output_settings.container_avname="h264";
     m_output_settings.video_codec_avname="libx264";
-    m_output_settings.file="./test.mkv";
+    m_output_settings.file="./test.264";
     m_output_settings.video_frame_rate=25;
     m_output_settings.video_kbit_rate=5000;
 }
@@ -86,6 +89,7 @@ static AVFrame* CreateVideoFrame(unsigned int width, unsigned int height, AVPixe
 
     // get required planes
     unsigned int planes = 0;
+    printf("pixel_format:%d\n", pixel_format);
     size_t linesize[3] = {0}, planesize[3] = {0};
     switch(pixel_format) {
         case AV_PIX_FMT_YUV444P: {
@@ -406,6 +410,7 @@ void MainTest::GrabThread() {
         frame=CreateVideoFrame(out_size.width(),out_size.height(), video_encoder->GetPixelFormat());
         x11->GetQimage(frame, video_encoder->GetPixelFormat(), out_size);
         frame->pts=local_pts;//local_pts;
+//        printf("frame->data_size[%s]\n", frame->data.);
         local_pts++;
 
         //badly preview for test

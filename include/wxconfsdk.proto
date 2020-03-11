@@ -1,0 +1,167 @@
+syntax = "proto2";
+package wxvoipsdk;
+option optimize_for = LITE_RUNTIME;
+
+// SDK初始化环境信息
+message ConfEnvInfo
+{ 
+    optional string app_id      = 1;    // AppID（CloudIM后台统一分配，微信小游戏为wx766655dab8fe851b）
+    optional string app_subid   = 2;    // 各业务自己分配（如区分不同的小游戏）
+    optional string auth_key    = 3;    // 登录身份Key
+    optional string work_dir    = 4;    // 日志及缓存文件路径
+    optional uint32 debug_svr   = 5;    // 测试服务器，0表示现网
+    optional uint32 out_log     = 6;    // 是否输出到外部日志
+    optional uint32 log_level   = 7;    // 日志输出级别，和mars的级别定义一样（0verbose, 1debug, 2info...）
+    optional uint32 audio_flag  = 8;    // 音频格式，0 silk，1 silk+aac-ld
+    optional uint32 def_close_av= 9;    // 1初始不开音频，2初始不开视频，一般默认填0
+    optional uint32 video_ratio = 10;   // 视频宽高比，0:3/4，1:6/19，2:1/1，3:1/2，定义见ConfVideoRatio
+    optional uint32 def_video_length = 11;  // 视频默认显示分辨率，长边的值，如640
+    optional uint32 video_width = 12;   // 视频宽，如480，已废弃，此处保留是为了临时编译通过
+    optional uint32 video_height= 13;   // 视频高，如640，已废弃，此处保留是为了临时编译通过
+
+    // 设备软硬件信息
+    optional uint32 cpu_core    = 20;   // CPU核数
+    optional uint32 cpu_freq    = 21;   // CPU频率（单位MHz）
+    optional uint32 cpu_flag    = 22;   // CPU指令集（1 armv5，2 armv6，4 armv7）
+
+    optional string device_manufacturer= 25;   // 设备厂商     android.os.Build.MANUFACTURER
+    optional string device_model= 26;          // 设备型号     android.os.Build.MODEL
+    optional string device_release = 27;       // 设备版本号   android.os.Build.VERSION.RELEASE
+    optional string device_incremental = 28;   // 设备系统源码版本号 android.os.Build.VERSION.INCREMENTAL
+    optional string device_display = 29;       // 设备显示版本 android.os.Build.DISPLAY
+    optional bytes  device_id   = 30;          // 设备ID（由网卡地址等计算而成，用于支持多终端登录，不超过16字节）
+
+    optional string os_version  = 31;          // 操作系统及版本（如iOS11.2.5、Android5.1.1、Windows 7）
+}
+
+// SDK初始化时的环境信息，Linux server版专用
+message ConfEnvInfoSvr
+{
+    optional string app_id      = 1;    // AppID（第三方厂商ID）
+    optional string app_secret  = 2;    // 微信公众平台开发者secret（app_secret和access_token选填其一）
+    optional string access_token= 3;    // 微信公众平台接口调用凭据（app_secret和access_token选填其一）
+    optional string device_id   = 4;    // 硬件设备唯一ID，第三方保证其唯一
+    optional string work_dir    = 5;    // 日志及缓存文件路径
+    optional uint32 debug_svr   = 6;    // 测试服务器，0表示现网
+    optional uint32 console_log = 7;    // 是否输出到控制台日志
+    optional uint32 log_level   = 8;    // 日志输出级别，和mars的级别定义一样（0verbose, 1debug, 2info...）
+    optional uint32 audio_flag  = 9;    // 音频格式，0 silk，1 silk+aac-ld
+
+    // 终端的硬件信息
+    optional uint32 cpu_core    = 10;   // CPU核数
+    optional uint32 cpu_freq    = 11;   // CPU频率（单位MHz）
+    optional uint32 cpu_flag    = 12;   // CPU指令集（1 armv5，2 armv6，4 armv7）
+
+    optional string device_manufacturer= 15; // 设备厂商
+    optional string device_model= 16;   // 设备型号
+    optional string device_release= 17; // 设备版本号
+
+    // 终端的软件信息
+    optional string os_version  = 19;    // 操作系统及版本（如iOS11.2.5、Android5.1.1、Windows 7）
+}
+
+message ConfRoomInfo
+{
+    optional uint64 imroomid      = 1;
+    optional uint64 roomid        = 2;
+    optional uint32 self_memberid = 3;
+}
+
+message ConfMemberInfo
+{
+    optional uint32 memberid    = 1;
+    optional string openid      = 2;
+}
+
+message ConfMemberList
+{
+    optional uint64 imroomid            = 1;
+    optional uint64 roomid              = 2;
+    repeated ConfMemberInfo member_list = 3;
+}
+
+message ConfAVMemberList
+{
+    optional uint64 imroomid            = 1;
+    optional uint64 roomid              = 2;
+    repeated uint32 audio_member_list   = 3;  // 开启了音频（麦克风）的成员列表
+    repeated uint32 video_member_list   = 4;  // 开启了视频（摄像头）的成员列表
+}
+
+message VideoMemberResolution
+{
+    required uint32 memberid            = 1;
+	required uint32 video_length        = 2;  // 显示分辨率，长边的值（图像像素数）
+}
+
+message VideoResolution
+{
+    required uint32 def_video_length       = 1; // 视频默认显示分辨率
+    repeated VideoMemberResolution members = 2; // 指定成员的显示分辨率
+}
+
+message DeviceAudioParam
+{
+    // 共用
+    optional uint32 sample_rate         = 1;  // 采样率
+    optional uint32 sample_len_inms     = 2;  // 采样长度
+    optional uint32 channels            = 3;  // 声道数
+
+    // 录音相关
+    optional int32 source_mode          = 4;
+    optional int32 phone_mode           = 5; 
+    optional int32 speaker_mode         = 6;
+
+    // 播放相关
+    optional int32 phone_streamtype     = 7; 
+    optional int32 speaker_streamtype   = 8; 
+    optional int32 voip_streamtype      = 9;  // 同时配置听筒/免提模式
+}
+
+message DeviceCamera
+{
+    optional uint32 enable  = 1;
+    optional uint32 fps     = 2;
+    optional uint32 orien   = 3;
+    optional uint32 isleft  = 4;
+    optional uint32 rotate  = 5;
+    optional uint32 width   = 6;
+    optional uint32 height  = 7;
+}
+
+message DeviceVideoParam
+{
+    optional uint32        camera_num       = 1;
+    optional DeviceCamera  front_camera     = 2;
+    optional DeviceCamera  back_camera      = 3;
+    optional uint32        focus_type       = 4;
+    optional uint32        fps_min          = 5;
+    optional uint32        fps_max          = 6;
+    optional uint32        support_hwenc    = 7;
+}
+
+message ConfDeviceParam
+{
+    optional uint64 roomid                  = 1;    // 通话唯一标识
+    optional DeviceAudioParam audio_param   = 2;    // 音频采集播放参数
+    optional DeviceVideoParam video_param   = 3;    // 视频采集播放参数
+}
+
+// 通话结束后上报
+message ConfDeviceReport
+{
+    optional uint32 audio_device_errcode    = 1;    // 音频设备启动失败（0成功，>0错误码）
+    optional uint32 video_device_errcode    = 2;    // 视频设备启动失败（0成功，>0错误码）
+    optional uint32 audio_recorder_errcode  = 3;    // 音频录音启动错误码（0成功，>0错误码）
+    optional uint32 audio_player_errcode    = 4;    // 音频播放启动错误码（0成功，>0错误码）
+    optional uint32 speaker_mode            = 5;    // 扬声器播放时的音频mode                  --安卓专用
+    optional uint32 phone_mode              = 6;    // 听筒播放时的音频mode                    --安卓专用
+    optional uint32 audio_source_mode       = 7;    // 录音声源参数（1：MIC；7：VOICE_COMMUNICATION等，默认7）                  --安卓专用
+    optional uint32 speaker_stream_type     = 8;    // 扬声器播放时的播放StreamType（0：STREAM_VOICE_CALL；3：STREAM_MUSIC等）  --安卓专用
+    optional uint32 phone_stream_type       = 9;    // 听筒播放时的播放StreamType（0：STREAM_VOICE_CALL；3：STREAM_MUSIC等）    --安卓专用
+
+    optional uint32 ring_player_errcode     = 10;   // 呼叫铃声是否存在异常（0：成功； >0失败错误码）
+    optional uint32 audio_setmode_errcode   = 11;   // Android音频mode是否设置成功（0：成功；1外放设置失败，2耳听设置失败，3都失败）
+    optional int32  audio_record_readnum    = 12;   // 录音读的次数（客户端从设备底层读取音频数据的次数）
+    optional int32  play_volume             = 13;   // 音频系统播放音量（0到100间的值，获取异常上报负值）
+}

@@ -26,10 +26,11 @@ along with SimpleScreenRecorder.  If not, see <http://www.gnu.org/licenses/>.
 #include "X264Presets.h"
 
 const std::vector<VideoEncoder::PixelFormatData> VideoEncoder::SUPPORTED_PIXEL_FORMATS = {
-	{"nv12", AV_PIX_FMT_NV12, true},
-	{"yuv420", AV_PIX_FMT_YUV420P, true},
-	{"yuv422", AV_PIX_FMT_YUV422P, true},
-	{"yuv444", AV_PIX_FMT_YUV444P, true},
+
+    {"yuv444", AV_PIX_FMT_YUV444P, true},
+    {"yuv420", AV_PIX_FMT_YUV420P, true},
+    {"nv12", AV_PIX_FMT_NV12, true},
+    {"yuv422", AV_PIX_FMT_YUV422P, true},
 	{"bgra", AV_PIX_FMT_BGRA, false},
 	{"bgr", AV_PIX_FMT_BGR24, false},
 };
@@ -174,6 +175,7 @@ void VideoEncoder::PrepareStream(AVStream* stream, AVCodecContext* codec_context
 			continue;
 		Logger::LogInfo("[VideoEncoder::PrepareStream] " + Logger::tr("Using pixel format %1.").arg(SUPPORTED_PIXEL_FORMATS[i].m_name));
 		codec_context->pix_fmt = SUPPORTED_PIXEL_FORMATS[i].m_format;
+        printf("jaylen,i:%d\n", i);
 		if(SUPPORTED_PIXEL_FORMATS[i].m_is_yuv) {
 			codec_context->color_primaries = AVCOL_PRI_BT709;
 			codec_context->color_trc = AVCOL_TRC_BT709;

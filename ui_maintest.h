@@ -44,7 +44,7 @@ public:
     {
         if (MainTest->objectName().isEmpty())
             MainTest->setObjectName(QStringLiteral("MainTest"));
-        MainTest->resize(400, 300);
+        MainTest->resize(1000, 800);
         centralWidget = new QWidget(MainTest);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
@@ -52,7 +52,7 @@ public:
         label->setGeometry(QRect(0, 0, 71, 16));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(10, 20, 361, 171));
+        label_2->setGeometry(QRect(10, 20, 900, 700));
         m_grab_rect = new QPushButton(centralWidget);
         m_grab_rect->setObjectName(QStringLiteral("m_grab_rect"));
         m_grab_rect->setGeometry(QRect(310, 180, 80, 26));
@@ -68,7 +68,7 @@ public:
         MainTest->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainTest);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 400, 23));
+        menuBar->setGeometry(QRect(0, 0, 1000, 22));
         menuDemo = new QMenu(menuBar);
         menuDemo->setObjectName(QStringLiteral("menuDemo"));
         MainTest->setMenuBar(menuBar);

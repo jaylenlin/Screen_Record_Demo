@@ -102,14 +102,14 @@ Muxer::~Muxer() {
 
 VideoEncoder* Muxer::AddVideoEncoder(const QString& codec_name, const std::vector<std::pair<QString, QString> >& codec_options,
 									 unsigned int bit_rate, unsigned int width, unsigned int height, unsigned int frame_rate) {
-	AVCodec *codec = FindCodec(codec_name);
+    AVCodec *codec = FindCodec(codec_name);
 	AVCodecContext *codec_context = NULL;
-	AVStream *stream = AddStream(codec, &codec_context);
+    AVStream *stream = AddStream(codec, &codec_context);
 	VideoEncoder *encoder;
 	AVDictionary *options = NULL;
 	try {
 		VideoEncoder::PrepareStream(stream, codec_context, codec, &options, codec_options, bit_rate, width, height, frame_rate);
-		m_encoders[stream->index] = encoder = new VideoEncoder(this, stream, codec_context, codec, &options);
+        m_encoders[stream->index] = encoder = new VideoEncoder(this, stream, codec_context, codec, &options);
 #if SSR_USE_AVSTREAM_CODECPAR
 		if(avcodec_parameters_from_context(stream->codecpar, codec_context) < 0) {
 			Logger::LogError("[Muxer::AddVideoEncoder] " + Logger::tr("Error: Can't copy parameters to stream!"));
@@ -121,6 +121,7 @@ VideoEncoder* Muxer::AddVideoEncoder(const QString& codec_name, const std::vecto
 		av_dict_free(&options);
 		throw;
 	}
+    printf("codec name:%s, id:%d, GetPixelFormat:%d\n", codec->name, codec->id, encoder->GetPixelFormat());
 	return encoder;
 }
 
