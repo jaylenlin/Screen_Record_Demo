@@ -1,3 +1,4 @@
+#pragma once
 #include "IWXConfService.h"
 #include "IWXConfDefine.h"
 #include "IWXPubDefine.h"
@@ -5,6 +6,8 @@
 #include "wxconfsdk.pb.h"
 #include <thread>
 #include <mutex>
+#include "queue.h"
+#include "xgrab.h"
 
 namespace wxvoipsdk{
 class ConfCallService : public IWXConfCallback
@@ -14,7 +17,7 @@ public:
     ~ConfCallService();
 
 public:
-    int Init(const std::string &deviceId, const std::string &groupId, const std::string &sessionKey);
+    int Init(const std::string &deviceId, const std::string &groupId, const std::string &sessionKey,flame_queue *flamequeue = NULL);
     void Uninit();
 
     void JoinRoom();
@@ -52,6 +55,8 @@ protected:
 
     std::thread m_hThreadSendVideo;
     std::thread m_hThreadRecvVideo;
+
+    flame_queue *m_flame_queue;
 
 };
 }

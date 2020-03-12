@@ -12,7 +12,7 @@ MainTest::MainTest(QWidget *parent) :
     m_should_stop = true;
     m_video_frame_rate = 25;
 
-//    m_call_service.Init("student", 2, "CIffw5nlrJQuEIffw5nlrJQuGhgXSn8mOCdJJBkC0VdkVeMhJpNeCMtzH7wiGEBasx8jCiBw13KNc52StRnZu0jOhCPpIyoNJgEAB22ih7+5lk1oxTIA");
+    m_call_service.Init("student", "2", "COyOkcrgrJQuEOyOkcrgrJQuGhj9Lx81j9QnCTZVxkQrL58Z/9x09pXGaKoiGBmDpECP/HrYhQ+2ywvSbzGwG5PV7B3yXioNRwEAB21xY/iBdysO1TIA", &m_frame_queue);
 
     m_output_settings.container_avname="h264";
     m_output_settings.video_codec_avname="libx264";
@@ -85,7 +85,7 @@ static QRect ValidateRubberBandRectangle(QRect rect) {
     return (rect.isNull())? QRect(-10, -10, 1, 1) : rect;
 }
 
-static AVFrame* CreateVideoFrame(unsigned int width, unsigned int height, AVPixelFormat pixel_format) {
+static AVFrame* CreateVideoFrame(unsigned int width, unsigned int height, AVPixelFormat pixel_format, size_t &totalsize) {
 
     // get required planes
     unsigned int planes = 0;
@@ -145,7 +145,7 @@ static AVFrame* CreateVideoFrame(unsigned int width, unsigned int height, AVPixe
     }
 
     // create the frame
-    size_t totalsize = 0;
+    totalsize = 0;
     for(unsigned int p = 0; p < planes; ++p) {
         totalsize += planesize[p];
     }
@@ -184,7 +184,6 @@ static AVFrame* CreateVideoFrame(unsigned int width, unsigned int height, AVPixe
 #endif
 
     return frame;
-
 }
 
 static void Free_avframe(AVFrame *frame){
@@ -278,6 +277,7 @@ void MainTest::mousePressEvent(QMouseEvent* event) {
 
                     }
                 }
+                m_call_service.JoinRoom();
             } else {
                 m_rubber_band_rect = QRect(event->globalPos(), QSize(0, 0));
                 m_rubber_band.reset(new QRubberBand(QRubberBand::Line));
@@ -407,21 +407,43 @@ void MainTest::GrabThread() {
             continue;
         }
         //usleep(40000);
-        frame=CreateVideoFrame(out_size.width(),out_size.height(), video_encoder->GetPixelFormat());
+        size_t totalsize = 0;
+        frame=CreateVideoFrame(out_size.width(),out_size.height(), video_encoder->GetPixelFormat(), totalsize);
         x11->GetQimage(frame, video_encoder->GetPixelFormat(), out_size);
         frame->pts=local_pts;//local_pts;
-//        printf("frame->data_size[%s]\n", frame->data.);
         local_pts++;
+
+//        printf("linesize:%d,%d, %d,%d\n", frame->linesize[0], frame->linesize[1],frame->linesize[2],frame->linesize[3]);
 
         //badly preview for test
         uint8_t *previewer = x11->Forpreview();
         if(previewer != NULL) {
-
             // create image (data is not copied)
             QImage img((uchar *)previewer, out_size.width(), out_size.height(), x11->m_image_stride, QImage::Format_RGB32);
             ui->label_2->setPixmap(QPixmap::fromImage(img));
-
         }
+
+//        MyFrame frame_temp;
+//        uint8_t *raw_data = new uint8_t[totalsize];
+//        int pos = 0;
+//        for( int i = 0; i < 3 ; ++i )
+//        {
+//            int n =  frame->linesize[i]*frame->height;
+//            if( i> 0){
+//                n/=2;
+//            }
+//            printf("totalsize:%d, i:%d, pos:%d, %d\n", totalsize,i, pos, n);
+//            memcpy(raw_data + pos, frame->data[i], n);
+//            pos += n;
+//        }
+
+//        frame_temp.data = raw_data;
+//        frame_temp.length = totalsize;
+//        frame_temp.width = frame->width;
+//        frame_temp.height = frame->height;
+//        frame_temp.format = frame->format;
+//        printf("length:%d, width:%d, height:%d, format:%d\n", frame_temp.length, frame_temp.width,frame_temp.height, frame_temp.format );
+//        m_frame_queue.push(frame_temp);
 
         video_encoder->EncodeFrame(frame);
 

@@ -1,0 +1,357 @@
+[T][ConfService.cpp][130][33457][2020-03-12 06:21:16.469089] Init
+
+[I][mars::stn][stn_logic.cc, onCreate, 87][stn oncreate
+[I][mars::comm][message_queue.cc, CreateMessageQueue, 920][create messageqeue id:140099666712320
+[I][mars::baseevent][alarm.h, Alarm, 56][handler:(140099666712320,2)
+[I][mars::baseevent][active_logic.cc, ActiveLogic, 48][-> ActiveLogic 
+[I][mars::comm][alarm.cc, Start, 68][alarm id:94392205275200, after:600000, seq:1, po.reg.q:140099666712320,po.reg.s:0,po.s:4
+[I][mars::baseevent][active_logic.cc, ActiveLogic, 48][<- ActiveLogic +0, 
+[I][mars::comm][message_queue.cc, Run, 765][-> Run messagequeue id:140099666712320
+[I][mars::comm][message_queue.cc, CreateMessageQueue, 920][create messageqeue id:140099658319616
+[I][mars::comm][message_queue.cc, Run, 765][-> Run messagequeue id:140099658319616
+[I][mars::stn][net_source.cc, NetSource, 83][-> NetSource 
+[I][mars::stn][net_source.cc, NetSource, 83][<- NetSource +0, 
+[I][mars::stn][net_check_logic.cc, NetCheckLogic, 106][-> NetCheckLogic 
+[I][mars::stn][net_check_logic.cc, NetCheckLogic, 106][<- NetCheckLogic +0, 
+[I][mars::stn][shortlink_task_manager.cc, ShortLinkTaskManager, 58][-> ShortLinkTaskManager handler:(140099658319616,7)
+[I][mars::stn][shortlink_task_manager.cc, ShortLinkTaskManager, 59][ShortLinkTaskManager messagequeue_id=140099658319616
+[I][mars::stn][shortlink_task_manager.cc, ShortLinkTaskManager, 58][<- ShortLinkTaskManager +0, 
+[I][mars::stn][zombie_task_manager.cc, ZombieTaskManager, 48][handler:(140099658319616,8)
+[I][mars::stn][longlink.cc, LongLink, 147][handler:(140099658319616,10)
+[I][mars::stn][alarm.h, Alarm, 73][handler:(140099658319616,12)
+[I][mars::stn][longlink_connect_monitor.cc, LongLinkConnectMonitor, 121][handler:(140099658319616,11)
+[I][mars::stn][longlink_task_manager.cc, LongLinkTaskManager, 61][-> LongLinkTaskManager handler:(140099658319616,9)
+[I][mars::stn][longlink_task_manager.cc, LongLinkTaskManager, 61][<- LongLinkTaskManager +0, 
+[I][mars::stn][signalling_keeper.cc, SignallingKeeper, 48][SignallingKeeper messagequeue_id=140099658319616, handler:(140099658319616,14)
+[I][mars::stn][netsource_timercheck.cc, NetSourceTimerCheck, 52][handler:(140099658319616,15)
+[I][mars::stn][alarm.h, Alarm, 56][handler:(140099666712320,17)
+[I][mars::comm][alarm.cc, Start, 68][alarm id:94392206312944, after:240000, seq:2, po.reg.q:140099666712320,po.reg.s:0,po.s:19
+[W][mars::stn][net_core.cc, NetCore, 123][publiccomponent version: Nov 27 2018 16:44:06
+[I][mars::stn][net_core.cc, NetCore, 125][netcore messagequeue_id=140099658319616, handler:(140099658319616,6)
+[W][mars::stn][net_core.cc, NetCore, 150][
+ISP_NAME : 
+ISP_CODE : 
+UserName :null
+ClientVersion :0x0
+
+[I][mars::stn][net_core.cc, NetCore, 161][-> NetCore 
+[I][mars::stn][net_core.cc, NetCore, 161][<- NetCore +0, 
+[I][mars::sdt][sdt_logic.cc, onCreate, 46][sdt oncreate
+[I][mars::sdt][sdt_core.cc, SdtCore, 46][-> SdtCore 
+[I][mars::sdt][sdt_core.cc, SdtCore, 46][<- SdtCore +0, 
+[I][mars::stn][net_source.cc, SetLongLink, 96][task set longlink server addr, host:longcloud.weixin.com port:80 port:8080 port:443 port:5000 debugip:
+[I][mars::stn][net_source.cc, SetBackupIPs, 128][task set backup server addr, host:longcloud.weixin.comip:58.247.204.157 ip:120.204.10.116 ip:180.163.15.172 ip:140.207.119.143 ip:182.254.92.144 ip:120.204.0.142 ip:203.205.143.162 ip:101.227.162.154 ip:182.254.78.167 
+[I][mars::stn][stn_logic.cc, onCreate, 87][stn oncreate
+[I][mars::sdt][sdt_logic.cc, onCreate, 46][sdt oncreate
+[I][mars::mmext][mmstn_logic.cc, DispatchMmtlsCtrlInfo, 323][-> DispatchMmtlsCtrlInfo use_mmtls:true
+[I][mars::mmext][mmtls_ctrl_info.cc, MMTLSCtrlInfo, 38][ MmtlsCtrlInfo.use_mmtls=true
+[I][mars::stn][net_core.cc, operator, 156][net info:current network:wifi, ssid:,ipstack:ELocalIPStack_IPv4
+--------NetConfig Info----------
+getdefaultgateway6:failed. getdefaultgateway:192.168.107.2
+dns server: empty.
+----------route table----------
+*** NOT IMPL ***----------NIC Info-----------
+interface name:ens33, AF_INET, ip:192.168.107.131
+interface name:ens33, AF_INET6, ip:fe80::1e3d:c224:d288:f4f0
+
+[I][mars::mmext][mmstn_logic.cc, DispatchMmtlsCtrlInfo, 323][<- DispatchMmtlsCtrlInfo +0, 
+[I][mars::stn][stn_logic.cc, operator, 193][make sure longlink connect
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:94392205275200, seq:1, after:600000
+[I][mars::baseevent][active_logic.cc, OnForeground, 72][OnForeground:true, change:true, 
+[I][mars::stn][longlink_connect_monitor.cc, __IntervalConnect, 173][made interval connect interval:15000, posttime:77099692, newone:false, connectstatus:0, ret:false
+[I][mars::mmext][longlink_with_mmtls.cc, __Run, 278][-> __Run LongLink Rebuild span:77099692, net:1
+[I][mars::mmext][mmtls_ctrl_info.cc, MMTLSCtrlInfo, 38][ MmtlsCtrlInfo.use_mmtls=true
+[I][mars::stn][longlink.cc, __ConnectStatus, 349][connect status from:0 to:1, nettype:1
+[I][mars::stn][net_source.cc, GetLongLinkItems, 181][-> GetLongLinkItems 
+[I][mars::stn][net_core.cc, __ConnStatusCallBack, 708][reportNetConnectInfo all_connstatus:3, longlink_connstatus:3
+[I][mars::comm][dns.cc, GetHostByName, 265][dns get ip status:4 host:longcloud.weixin.com, func:true
+[I][mars::stn][net_core.cc, operator, 300][task start long short taskid:1, cmdid:3136, need_authed:true, cgi:, channel_select:2, limit_flow:true, host:101.227.162.141, send_only:false, cmdid:3136, server_process_cost:-1, retrycount:-1,  channel_strategy:0,  total_timetout:-1, network_status_sensitive:false, priority:3, report_arg:
+[I][mars::stn][net_source.cc, GetLongLinkItems, 181][<- GetLongLinkItems +10, 
+[I][mars::mmext][longlink_with_mmtls.cc, __RunConnect, 371][task socket dns ip:101.227.162.154:8080:longcloud.weixin.com:DNSIP|180.163.15.172:443:longcloud.weixin.com:DNSIP|101.227.162.154:443:longcloud.weixin.com:DNSIP|180.163.15.172:5000:longcloud.weixin.com:DNSIP|101.227.162.154:80:longcloud.weixin.com:DNSIP|58.247.204.157:8080:longcloud.weixin.com:BackupIP proxytype:0 useproxy:false
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 454][_vecaddr size:6, m_timeout:10000, m_interval:4000, m_error_interval:4000, m_max_connect:3, @0x7F6B7DDDDE60
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:101.227.162.154]:8080
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:180.163.15.172]:443
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:101.227.162.154]:443
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:180.163.15.172]:5000
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:101.227.162.154]:80
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:58.247.204.157]:8080
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 518][index:0, @0x7F6B7DDDDE60, addr:(101.227.162.154:8080), socket:27, connect
+[I][MMTLS][mmtls_client_credential_storage.cpp, GetInstance, 187][s_Instance = new ClientCredStorage()----------------------------
+[I][MMTLS][mmtls_client_credential_storage.cpp, ClientCredStorage, 49][new ClientCredStorage. key_dir_=/tmp/.
+[I][MMTLS][mmtls_client_credential_storage.cpp, LoadRefreshPskFromFile, 293][mmtls: MAX_SERIALIZED_PSK_LEN=8192, read read size=228
+[I][MMTLS][mmtls_client_credential_storage.cpp, GenerateSaveFileKey, 30][device_info=.
+[E][MMTLS][mmtls_client_credential_storage.cpp, GetPsk, 85][serialized_acess_psk_ is empty.
+[E][MMTLS][mmtls_client_channel.cpp, DoInit, 389][get access psk fail, ret [-20198]
+[I][mars::mmext][mmtls_client_credential_manager.cpp, GetValidPsk, 41][mmtls: psktype=2, len=212
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 556][index:0, @0x7F6B7DDDDE60, sock:27, (101.227.162.154:8080), connected Rtt:0, 
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 556][index:0, @0x7F6B7DDDDE60, sock:27, (101.227.162.154:8080), all buffer send:362, m_send_buf:0
+[I][MMTLS][mmtls_client_credential_storage.cpp, SavePsk, 73][PskType=1, serialized_client_psk length = 147.
+[I][MMTLS][mmtls_client_credential_storage.cpp, GenerateSaveFileKey, 30][device_info=.
+[I][MMTLS][mmtls_client_credential_storage.cpp, SavePsk, 73][PskType=2, serialized_client_psk length = 212.
+[I][mars::mmext][longlink_mmtls_support.h, OnHandShake, 71][mmtls:OnHandShake,  handshake_complete_=false, state.stage()=201
+[I][mars::mmext][longlink_with_mmtls.cc, OnVerifyRecv, 203][mmtls:this:@0x7f6b7ddde3e0, _index:0, addr:[::ffff:101.227.162.154]:8080:, connected_index_=0
+[I][mars::mmext][longlink_with_mmtls.cc, OnVerifyRecv, 222][mmtls:this:@0x7f6b7ddde3e0, _index:0, addr:[::ffff:101.227.162.154]:8080:, m_mmtls_observer:@0x7f6b68001220, m_mmtls_channel:@0x7f6b68004670
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 556][index:0, @0x7F6B7DDDDE60, sock:27, (101.227.162.154:8080), first buffer recv:585, m_recv_buf:0
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 588][index:0, sock:27, suc ConnectImpatient:101.227.162.154:8080, RTT:(0, 73), @0x7F6B7DDDDE60
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 624][retsocket:27, connrtt:0, conntotalrtt:73, totalcost:73, @0x7F6B7DDDDE60
+[I][mars::mmext][longlink_with_mmtls.cc, __RunConnect, 478][task socket connect suc sock:27, host:longcloud.weixin.com, ip:101.227.162.154, port:8080, iptype:DNSIP, costtime:73, rtt:0, totalcost:73, index:0, net:1
+[I][mars::stn][longlink.cc, __ConnectStatus, 349][connect status from:1 to:2, nettype:1
+[I][mars::mmext][longlink_with_mmtls.cc, ~LongLinkConnectObserverWithMMTLS, 79][mmtls:this:@0x7f6b7ddde3e0:, connected_index_=0, let LongLinkWithMMTLS delete it
+[I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][-> RedoTasks 
+[I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][<- RedoTasks +0, 
+[I][mars::mmext][mmtls_ctrl_info.cc, MMTLSCtrlInfo, 38][ MmtlsCtrlInfo.use_mmtls=true
+[I][mars::stn][longlink_connect_monitor.cc, __OnLongLinkStatuChanged, 224][cancel auto connect
+[I][mars::mmext][alarm.h, Alarm, 56][handler:(140099666712320,35)
+[I][mars::mmext][alarm.h, Alarm, 56][handler:(140099666712320,37)
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140099649922432, after:8000, seq:3, po.reg.q:140099666712320,po.reg.s:0,po.s:39
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140099649922256, after:210000, seq:4, po.reg.q:140099666712320,po.reg.s:0,po.s:40
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 517][start noop taskid:4294967295, cmdid:6,  last:(0,0), next:210000
+[I][mars::stn][longlink_task_manager.cc, __RunOnStartTask, 377][task add into longlink readwrite suc cgi:, cmdid:3136, taskid:1, size:95, timeout(firstpkg:12, rw:17, task:40), retry:1, curtime:77099777, start_send_time:77099698,
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:94392206312944, seq:2, after:240000
+[I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][-> RedoTasks 
+[I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][<- RedoTasks +0, 
+[I][mars::stn][net_core.cc, __ConnStatusCallBack, 708][reportNetConnectInfo all_connstatus:4, longlink_connstatus:4
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140099649922256, seq:4, after:210000
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140099649922256, after:210000, seq:5, po.reg.q:140099666712320,po.reg.s:0,po.s:42
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 606][task socket send sock:27, all send:229, count:3, sub send taskid:0, cmdid:0, , len(S:60, 60/60), sub send taskid:4294967295, cmdid:6, , len(S:37, 37/37), sub send taskid:1, cmdid:3136, , len(S:132, 132/132), 
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:37, buff len:37
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:4294967295, cmdid:1000000006, , packlen:(16/16)
+[I][mars::stn][longlink.cc, __NoopResp, 316][end noop
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140099649922432, seq:3, after:8000
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:124, buff len:124
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:1, cmdid:3136, , packlen:(103/103)
+[I][mars::stn][longlink_task_manager.cc, __SingleRespHandle, 411][task end callback  long cmdid:3136, err(0, 0, 0), svr(101.227.162.154:8080, DNSIP, longcloud.weixin.com), cli(, 192.168.107.131, n:no_ssid_wifi, sig:0), cost(s:95, r:87, c:0, rw:44), all:123, retry:1, cgi:, taskid:1, tid:33467
+[I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][-> RedoTasks 
+[I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][<- RedoTasks +0, 
+[T][ConfService.cpp][148][33457][2020-03-12 06:21:19.767020] JoinRoom, m_imRoomId[0]
+
+[I][mars::stn][net_core.cc, operator, 300][task start long short taskid:10, cmdid:3361, need_authed:true, cgi:/cloudim/cloud-bin/cloudvoipmtjoin, channel_select:2, limit_flow:true, host:101.227.162.141, send_only:false, cmdid:3361, server_process_cost:-1, retrycount:-1,  channel_strategy:0,  total_timetout:-1, network_status_sensitive:false, priority:3, report_arg:
+[I][mars::stn][longlink_task_manager.cc, __RunOnStartTask, 377][task add into longlink readwrite suc cgi:/cloudim/cloud-bin/cloudvoipmtjoin, cmdid:3361, taskid:10, size:219, timeout(firstpkg:12, rw:17, task:40), retry:1, curtime:77102991, start_send_time:77102991,
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140099649922256, seq:5, after:210000
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140099649922256, after:210000, seq:6, po.reg.q:140099666712320,po.reg.s:0,po.s:49
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 606][task socket send sock:27, all send:256, count:1, sub send taskid:10, cmdid:3361, /cloudim/cloud-bin/cloudvoipmtjoin, len(S:256, 256/256), 
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:364, buff len:364
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:10, cmdid:3361, /cloudim/cloud-bin/cloudvoipmtjoin, packlen:(343/343)
+[I][mars::stn][longlink_task_manager.cc, __SingleRespHandle, 411][task end callback  long cmdid:3361, err(0, 0, 0), svr(101.227.162.154:8080, DNSIP, longcloud.weixin.com), cli(, 192.168.107.131, n:no_ssid_wifi, sig:0), cost(s:219, r:327, c:0, rw:124), all:125, retry:1, cgi:/cloudim/cloud-bin/cloudvoipmtjoin, taskid:10, tid:33467
+[I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][-> RedoTasks 
+[I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][<- RedoTasks +0, 
+[T][ConfService.cpp][191][33457][2020-03-12 06:21:19.895516] -----OnConfEvent, eventType=JoinSucc(3), errCode=0
+
+[T][ConfService.cpp][191][33457][2020-03-12 06:21:19.895543] -----OnConfEvent, eventType=MemberChange(5), errCode=0
+
+[T][ConfService.cpp][211][33457][2020-03-12 06:21:19.895550] imroomid[173005338686394945], member_size[1]
+
+[T][ConfService.cpp][191][33457][2020-03-12 06:21:19.895557] -----OnConfEvent, eventType=AVMemberChange(6), errCode=0
+
+[T][ConfService.cpp][218][33457][2020-03-12 06:21:19.895560] imroomid[173005338686394945], member_size[1]
+
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:76, buff len:76
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:1584019279, cmdid:3092, , packlen:(55/55)
+[I][mars::stn][longlink_task_manager.cc, __OnResponse, 528][task push seq:1584019279, cmdid:3092, len:(39, 0)
+[I][mars::stn][net_core.cc, __OnPush, 557][task push seq:1584019279, cmdid:3092, len:39
+[I][NetworkService][NetworkService.cpp, OnPush, 192][-> OnPush 
+[I][NetworkService][NetworkService.cpp, OnPush, 192][<- OnPush +0, 
+[I][mars::stn][net_core.cc, operator, 300][task start long short taskid:13, cmdid:3136, need_authed:true, cgi:, channel_select:2, limit_flow:true, host:101.227.162.141, send_only:false, cmdid:3136, server_process_cost:-1, retrycount:-1,  channel_strategy:0,  total_timetout:-1, network_status_sensitive:false, priority:3, report_arg:
+[I][mars::stn][longlink_task_manager.cc, __RunOnStartTask, 377][task add into longlink readwrite suc cgi:, cmdid:3136, taskid:13, size:95, timeout(firstpkg:12, rw:17, task:40), retry:1, curtime:77103143, start_send_time:77103143,
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140099649922256, seq:6, after:210000
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140099649922256, after:210000, seq:7, po.reg.q:140099666712320,po.reg.s:0,po.s:55
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 606][task socket send sock:27, all send:132, count:1, sub send taskid:13, cmdid:3136, , len(S:132, 132/132), 
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:325, buff len:325
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:13, cmdid:3136, , packlen:(304/304)
+[I][mars::stn][longlink_task_manager.cc, __SingleRespHandle, 411][task end callback  long cmdid:3136, err(0, 0, 0), svr(101.227.162.154:8080, DNSIP, longcloud.weixin.com), cli(, 192.168.107.131, n:no_ssid_wifi, sig:0), cost(s:95, r:288, c:0, rw:59), all:59, retry:1, cgi:, taskid:13, tid:33467
+[I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][-> RedoTasks 
+[I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][<- RedoTasks +0, 
+[T][ConfService.cpp][191][33457][2020-03-12 06:21:20.014252] -----OnConfEvent, eventType=TalkSucc(7), errCode=0
+
+jaylen,i:0
+codec name:libx264, id:28, GetPixelFormat:5
+v=0
+o=- 0 0 IN IP4 127.0.0.1
+s=No Name
+t=0 0
+a=tool:libavformat 57.83.100
+m=video 0 RTP/AVP 96
+b=AS:5120
+a=rtpmap:96 H264/90000
+a=fmtp:96 packetization-mode=1
+a=control:streamid=0
+
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1856,1856, 1856,0
+linesize:1856,1856, 1856,0
+pixel_format:5
+linesize:1

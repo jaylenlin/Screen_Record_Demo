@@ -102,13 +102,10 @@ void ConfCallService::Uninit()
     }
 }
 
-int ConfCallService::Init(const std::string &deviceId, const std::string &groupId, const std::string &sessionKey)
+int ConfCallService::Init(const std::string &deviceId, const std::string &groupId, const std::string &sessionKey, flame_queue *flamequeue)
 {
     m_groupId = groupId;
-
-//    m_h264File = "p10.264";
-    m_h264File = fileName;
-
+    m_flame_queue = flamequeue;
     m_bStudent = deviceId == "student";
 
     uint32_t audioFlag = 0;
@@ -143,14 +140,12 @@ int ConfCallService::Init(const std::string &deviceId, const std::string &groupI
     m_bCalling = false;
     m_bTalking = false;
 
-    if(m_bInited)
-        JoinRoom();
     return 0;
 }
 
 void ConfCallService::JoinRoom()
 {
-    ctrace("JoinRoom, m_imRoomId[%"PRIu64"]\n", m_imRoomId);
+    ctrace("JoinRoom, m_imRoomId[%" PRIu64 "]\n", m_imRoomId);
     if(m_imRoomId > 0)
         m_pService->JoinRoom(m_imRoomId, ROOM_TYPE_VIDEO, NET_TYPE_WIFI);
     else
@@ -213,14 +208,14 @@ int ConfCallService::OnConfEvent(WXConfEvent eventType, int errCode, void *pPara
     {
         std::lock_guard<std::mutex> lock(m_mutex);
         m_MemberList.ParseFromArray(pParamBuf, bufLen);
-        ctrace("imroomid[%"PRIu64"], member_size[%d]\n", m_MemberList.roomid(), m_MemberList.member_list_size());
+        ctrace("imroomid[%" PRIu64 "], member_size[%d]\n", m_MemberList.roomid(), m_MemberList.member_list_size());
         break;
     }
     case WXCONF_EVENT_AVMEMBER_CHANGE:
     {
         std::lock_guard<std::mutex> lock(m_mutex);
         m_AVMemberList.ParseFromArray(pParamBuf, bufLen);
-        ctrace("imroomid[%"PRIu64"], member_size[%d]\n", m_AVMemberList.roomid(), m_AVMemberList.video_member_list_size());
+        ctrace("imroomid[%" PRIu64 "], member_size[%d]\n", m_AVMemberList.roomid(), m_AVMemberList.video_member_list_size());
         break;
     }
     case WXCONF_EVENT_TALK_SUCC:
@@ -264,9 +259,9 @@ int ConfCallService::OnConfEvent(WXConfEvent eventType, int errCode, void *pPara
 void *ConfCallService::VideoSendThreadFunc(void *pData)
 {
     ConfCallService *pThis = (ConfCallService *) pData;
-    unsigned char *pBuf = new unsigned char[1714*966*4]{0};
-    size_t sz = 0;
-    int    tp = 0;
+
+    MyFrame frame;
+    frame.data = new uint8_t[6000000]{0};
     int sendDeltaUs = 30000; // 30ms
     while (pThis->m_bTalking)
     {
@@ -282,48 +277,21 @@ void *ConfCallService::VideoSendThreadFunc(void *pData)
             usleep(sendDeltaUs * 10);
         }
 
-        ctrace("read h264 file:%s", pThis->m_h264File.c_str());
-        H264FileReader reader(pThis->m_h264File);
-        DeltaClock clk(sendDeltaUs);
-
         while (memberList.member_list_size() > 1)
         {
-            int rd = reader.ReadNalu(pBuf, sz, tp);
-            ctrace("ReadNalu ONCE, ret=%d, type=%d, len=%d",  rd, tp, sz);
-            if(rd<=0 ) {
-                ctrace("member %u ReadNalu error 1", pThis->m_selfMemberId);
-                break;
-            }
+            pThis->m_flame_queue->wait_and_pop(frame);
 
-            int IPS = (tp == 5) ? 1 : 0;
-            if(tp == 7){
-                size_t sz2 = 0;
-                rd = reader.ReadNalu(pBuf+sz, sz2, tp);
-                ctrace("ReadNalu ONCE2, ret=%d, type=%d, len=%d",  rd, tp, sz2);
-                if(rd<=0 || tp!=8) {
-                    ctrace("member %u ReadNalu error 2", pThis->m_selfMemberId);
-                    break;
-                }
-                sz += sz2;
-                IPS = 2;
-            }
-
-            int ret = pThis->m_pService->SendVideoData(pBuf, sz, 0, IPS, 18);
-            ctrace("SendVideoData ONCE, ret=%d, type=%d, len=%d",  ret, IPS, sz);
+            int ret = pThis->m_pService->SendVideoData(frame.data, frame.length, frame.width, frame.height, frame.format);
+            ctrace("SendVideoData ONCE, ret=%d, length=%d, width=%d, height:%d\n",  ret, frame.length, frame.width, frame.height);
             if (ret < 0)
             {
                 ctrace("send member %u video data error,ret=%d", pThis->m_selfMemberId, ret);
                 break;
             }
-            ctrace("send video data success,buf size:%d", sz);
-
-            usleep(clk.DeltaUs());
         }
-        ctrace("loop end");
     }
-sendVideoEnd:
     ctrace("send video end");
-    delete[] pBuf, pBuf = nullptr;
+    delete[] frame.data, frame.data = nullptr;
 }
 
 void *ConfCallService::VideoRecvThreadFunc(void *pData)

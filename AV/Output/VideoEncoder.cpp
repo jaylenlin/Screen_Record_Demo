@@ -27,9 +27,9 @@ along with SimpleScreenRecorder.  If not, see <http://www.gnu.org/licenses/>.
 
 const std::vector<VideoEncoder::PixelFormatData> VideoEncoder::SUPPORTED_PIXEL_FORMATS = {
 
-    {"yuv444", AV_PIX_FMT_YUV444P, true},
     {"yuv420", AV_PIX_FMT_YUV420P, true},
     {"nv12", AV_PIX_FMT_NV12, true},
+    {"yuv444", AV_PIX_FMT_YUV444P, true},
     {"yuv422", AV_PIX_FMT_YUV422P, true},
 	{"bgra", AV_PIX_FMT_BGRA, false},
 	{"bgr", AV_PIX_FMT_BGR24, false},

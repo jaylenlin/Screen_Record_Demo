@@ -268,7 +268,7 @@ uint8_t * xgrab::Forpreview(){
             m_x11_shm_server_attached = true;
         }
         if(!XShmGetImage(m_x11_display, m_x11_root, m_x11_image, grab_x, grab_y, AllPlanes)) {
-            fprintf(stderr,"Error: Can't get image (using shared memory)!\n");
+            fprintf(stderr,"Error: 1Can't get image (using shared memory)!\n");
         }
     } else {
         if(m_x11_image != NULL) {
@@ -277,7 +277,7 @@ uint8_t * xgrab::Forpreview(){
         }
         m_x11_image = XGetImage(m_x11_display, m_x11_root, grab_x, grab_y, m_width, m_height, AllPlanes, ZPixmap);
         if(m_x11_image == NULL) {
-            fprintf(stderr,"Error: Can't get image (not using shared memory)!\n");
+            fprintf(stderr,"Error: 2Can't get image (not using shared memory)!\n");
         }
     }
 
@@ -305,7 +305,7 @@ void xgrab::GetQimage(AVFrame *frame, AVPixelFormat out_pixel_format, QSize out_
             m_x11_shm_server_attached = true;
         }
         if(!XShmGetImage(m_x11_display, m_x11_root, m_x11_image, grab_x, grab_y, AllPlanes)) {
-            fprintf(stderr,"Error: Can't get image (using shared memory)!\n");
+            fprintf(stderr,"Error: 3Can't get image (using shared memory)!\n");
         }
     } else {
         if(m_x11_image != NULL) {
@@ -314,7 +314,7 @@ void xgrab::GetQimage(AVFrame *frame, AVPixelFormat out_pixel_format, QSize out_
         }
         m_x11_image = XGetImage(m_x11_display, m_x11_root, grab_x, grab_y, m_width, m_height, AllPlanes, ZPixmap);
         if(m_x11_image == NULL) {
-            fprintf(stderr,"Error: Can't get image (not using shared memory)!\n");
+            fprintf(stderr,"Error: 4Can't get image (not using shared memory)!\n");
         }
     }
 

@@ -5,6 +5,8 @@
 #include "Muxer.h"
 #include "VideoEncoder.h"
 #include "OutputSettings.h"
+#include "ConfService.h"
+#include "queue.h"
 
 namespace Ui {
 class MainTest;
@@ -55,7 +57,8 @@ private:
     std::unique_ptr<Muxer> m_muxer;
     VideoEncoder *m_video_encoder;
 
-//    ConfCallService m_call_service;
+    wxvoipsdk::ConfCallService m_call_service;
+    flame_queue m_frame_queue;
 
 
 private slots:
