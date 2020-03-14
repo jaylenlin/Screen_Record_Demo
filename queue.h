@@ -42,7 +42,6 @@ public:
 //        printf("%d data:%u, length:%zu\n", __LINE__, frame.data[0], frame.length);
         MyFrame store_frame;
         store_frame.data = new uint8_t[frame.length]{0};
-//        printf("%d data:%u, length:%zu\n", __LINE__, frame.data[0], frame.length);
         memcpy(store_frame.data, frame.data, frame.length );
         store_frame.length = frame.length;
         store_frame.width = frame.width;

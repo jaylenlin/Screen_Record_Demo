@@ -1,33 +1,33 @@
-[T][ConfService.cpp][130][33457][2020-03-12 06:21:16.469089] Init
+[T][ConfService.cpp][132][11083][2020-03-13 14:43:01.544935] Init
 
 [I][mars::stn][stn_logic.cc, onCreate, 87][stn oncreate
-[I][mars::comm][message_queue.cc, CreateMessageQueue, 920][create messageqeue id:140099666712320
-[I][mars::baseevent][alarm.h, Alarm, 56][handler:(140099666712320,2)
+[I][mars::comm][message_queue.cc, CreateMessageQueue, 920][create messageqeue id:140550601619200
+[I][mars::baseevent][alarm.h, Alarm, 56][handler:(140550601619200,2)
 [I][mars::baseevent][active_logic.cc, ActiveLogic, 48][-> ActiveLogic 
-[I][mars::comm][alarm.cc, Start, 68][alarm id:94392205275200, after:600000, seq:1, po.reg.q:140099666712320,po.reg.s:0,po.s:4
+[I][mars::comm][alarm.cc, Start, 68][alarm id:93937930169184, after:600000, seq:1, po.reg.q:140550601619200,po.reg.s:0,po.s:4
 [I][mars::baseevent][active_logic.cc, ActiveLogic, 48][<- ActiveLogic +0, 
-[I][mars::comm][message_queue.cc, Run, 765][-> Run messagequeue id:140099666712320
-[I][mars::comm][message_queue.cc, CreateMessageQueue, 920][create messageqeue id:140099658319616
-[I][mars::comm][message_queue.cc, Run, 765][-> Run messagequeue id:140099658319616
+[I][mars::comm][message_queue.cc, CreateMessageQueue, 920][create messageqeue id:140550388840192
+[I][mars::comm][message_queue.cc, Run, 765][-> Run messagequeue id:140550601619200
 [I][mars::stn][net_source.cc, NetSource, 83][-> NetSource 
 [I][mars::stn][net_source.cc, NetSource, 83][<- NetSource +0, 
 [I][mars::stn][net_check_logic.cc, NetCheckLogic, 106][-> NetCheckLogic 
 [I][mars::stn][net_check_logic.cc, NetCheckLogic, 106][<- NetCheckLogic +0, 
-[I][mars::stn][shortlink_task_manager.cc, ShortLinkTaskManager, 58][-> ShortLinkTaskManager handler:(140099658319616,7)
-[I][mars::stn][shortlink_task_manager.cc, ShortLinkTaskManager, 59][ShortLinkTaskManager messagequeue_id=140099658319616
+[I][mars::stn][shortlink_task_manager.cc, ShortLinkTaskManager, 58][-> ShortLinkTaskManager handler:(140550388840192,7)
+[I][mars::stn][shortlink_task_manager.cc, ShortLinkTaskManager, 59][ShortLinkTaskManager messagequeue_id=140550388840192
+[I][mars::comm][message_queue.cc, Run, 765][-> Run messagequeue id:140550388840192
 [I][mars::stn][shortlink_task_manager.cc, ShortLinkTaskManager, 58][<- ShortLinkTaskManager +0, 
-[I][mars::stn][zombie_task_manager.cc, ZombieTaskManager, 48][handler:(140099658319616,8)
-[I][mars::stn][longlink.cc, LongLink, 147][handler:(140099658319616,10)
-[I][mars::stn][alarm.h, Alarm, 73][handler:(140099658319616,12)
-[I][mars::stn][longlink_connect_monitor.cc, LongLinkConnectMonitor, 121][handler:(140099658319616,11)
-[I][mars::stn][longlink_task_manager.cc, LongLinkTaskManager, 61][-> LongLinkTaskManager handler:(140099658319616,9)
+[I][mars::stn][zombie_task_manager.cc, ZombieTaskManager, 48][handler:(140550388840192,8)
+[I][mars::stn][longlink.cc, LongLink, 147][handler:(140550388840192,10)
+[I][mars::stn][alarm.h, Alarm, 73][handler:(140550388840192,12)
+[I][mars::stn][longlink_connect_monitor.cc, LongLinkConnectMonitor, 121][handler:(140550388840192,11)
+[I][mars::stn][longlink_task_manager.cc, LongLinkTaskManager, 61][-> LongLinkTaskManager handler:(140550388840192,9)
 [I][mars::stn][longlink_task_manager.cc, LongLinkTaskManager, 61][<- LongLinkTaskManager +0, 
-[I][mars::stn][signalling_keeper.cc, SignallingKeeper, 48][SignallingKeeper messagequeue_id=140099658319616, handler:(140099658319616,14)
-[I][mars::stn][netsource_timercheck.cc, NetSourceTimerCheck, 52][handler:(140099658319616,15)
-[I][mars::stn][alarm.h, Alarm, 56][handler:(140099666712320,17)
-[I][mars::comm][alarm.cc, Start, 68][alarm id:94392206312944, after:240000, seq:2, po.reg.q:140099666712320,po.reg.s:0,po.s:19
+[I][mars::stn][signalling_keeper.cc, SignallingKeeper, 48][SignallingKeeper messagequeue_id=140550388840192, handler:(140550388840192,14)
+[I][mars::stn][netsource_timercheck.cc, NetSourceTimerCheck, 52][handler:(140550388840192,15)
+[I][mars::stn][alarm.h, Alarm, 56][handler:(140550601619200,17)
+[I][mars::comm][alarm.cc, Start, 68][alarm id:93937932603216, after:240000, seq:2, po.reg.q:140550601619200,po.reg.s:0,po.s:19
 [W][mars::stn][net_core.cc, NetCore, 123][publiccomponent version: Nov 27 2018 16:44:06
-[I][mars::stn][net_core.cc, NetCore, 125][netcore messagequeue_id=140099658319616, handler:(140099658319616,6)
+[I][mars::stn][net_core.cc, NetCore, 125][netcore messagequeue_id=140550388840192, handler:(140550388840192,6)
 [W][mars::stn][net_core.cc, NetCore, 150][
 ISP_NAME : 
 ISP_CODE : 
@@ -45,37 +45,37 @@ ClientVersion :0x0
 [I][mars::sdt][sdt_logic.cc, onCreate, 46][sdt oncreate
 [I][mars::mmext][mmstn_logic.cc, DispatchMmtlsCtrlInfo, 323][-> DispatchMmtlsCtrlInfo use_mmtls:true
 [I][mars::mmext][mmtls_ctrl_info.cc, MMTLSCtrlInfo, 38][ MmtlsCtrlInfo.use_mmtls=true
+[I][mars::mmext][mmstn_logic.cc, DispatchMmtlsCtrlInfo, 323][<- DispatchMmtlsCtrlInfo +0, 
+[I][mars::stn][stn_logic.cc, operator, 193][make sure longlink connect
 [I][mars::stn][net_core.cc, operator, 156][net info:current network:wifi, ssid:,ipstack:ELocalIPStack_IPv4
 --------NetConfig Info----------
-getdefaultgateway6:failed. getdefaultgateway:192.168.107.2
+getdefaultgateway6:failed. getdefaultgateway:192.168.157.2
 dns server: empty.
 ----------route table----------
 *** NOT IMPL ***----------NIC Info-----------
-interface name:ens33, AF_INET, ip:192.168.107.131
-interface name:ens33, AF_INET6, ip:fe80::1e3d:c224:d288:f4f0
+interface name:ens33, AF_INET, ip:192.168.157.136
+interface name:ens33, AF_INET6, ip:fe80::64ec:34ae:8a65:1b32
 
-[I][mars::mmext][mmstn_logic.cc, DispatchMmtlsCtrlInfo, 323][<- DispatchMmtlsCtrlInfo +0, 
-[I][mars::stn][stn_logic.cc, operator, 193][make sure longlink connect
-[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:94392205275200, seq:1, after:600000
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:93937930169184, seq:1, after:600000
 [I][mars::baseevent][active_logic.cc, OnForeground, 72][OnForeground:true, change:true, 
-[I][mars::stn][longlink_connect_monitor.cc, __IntervalConnect, 173][made interval connect interval:15000, posttime:77099692, newone:false, connectstatus:0, ret:false
-[I][mars::mmext][longlink_with_mmtls.cc, __Run, 278][-> __Run LongLink Rebuild span:77099692, net:1
+[I][mars::stn][longlink_connect_monitor.cc, __IntervalConnect, 173][made interval connect interval:15000, posttime:7395335, newone:false, connectstatus:0, ret:false
+[I][mars::mmext][longlink_with_mmtls.cc, __Run, 278][-> __Run LongLink Rebuild span:7395335, net:1
 [I][mars::mmext][mmtls_ctrl_info.cc, MMTLSCtrlInfo, 38][ MmtlsCtrlInfo.use_mmtls=true
 [I][mars::stn][longlink.cc, __ConnectStatus, 349][connect status from:0 to:1, nettype:1
 [I][mars::stn][net_source.cc, GetLongLinkItems, 181][-> GetLongLinkItems 
 [I][mars::stn][net_core.cc, __ConnStatusCallBack, 708][reportNetConnectInfo all_connstatus:3, longlink_connstatus:3
 [I][mars::comm][dns.cc, GetHostByName, 265][dns get ip status:4 host:longcloud.weixin.com, func:true
 [I][mars::stn][net_core.cc, operator, 300][task start long short taskid:1, cmdid:3136, need_authed:true, cgi:, channel_select:2, limit_flow:true, host:101.227.162.141, send_only:false, cmdid:3136, server_process_cost:-1, retrycount:-1,  channel_strategy:0,  total_timetout:-1, network_status_sensitive:false, priority:3, report_arg:
-[I][mars::stn][net_source.cc, GetLongLinkItems, 181][<- GetLongLinkItems +10, 
-[I][mars::mmext][longlink_with_mmtls.cc, __RunConnect, 371][task socket dns ip:101.227.162.154:8080:longcloud.weixin.com:DNSIP|180.163.15.172:443:longcloud.weixin.com:DNSIP|101.227.162.154:443:longcloud.weixin.com:DNSIP|180.163.15.172:5000:longcloud.weixin.com:DNSIP|101.227.162.154:80:longcloud.weixin.com:DNSIP|58.247.204.157:8080:longcloud.weixin.com:BackupIP proxytype:0 useproxy:false
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 454][_vecaddr size:6, m_timeout:10000, m_interval:4000, m_error_interval:4000, m_max_connect:3, @0x7F6B7DDDDE60
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:101.227.162.154]:8080
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:180.163.15.172]:443
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:101.227.162.154]:443
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:180.163.15.172]:5000
+[I][mars::stn][net_source.cc, GetLongLinkItems, 181][<- GetLongLinkItems +5, 
+[I][mars::mmext][longlink_with_mmtls.cc, __RunConnect, 371][task socket dns ip:101.227.162.154:80:longcloud.weixin.com:DNSIP|180.163.15.172:8080:longcloud.weixin.com:DNSIP|101.227.162.154:443:longcloud.weixin.com:DNSIP|180.163.15.172:443:longcloud.weixin.com:DNSIP|101.227.162.154:5000:longcloud.weixin.com:DNSIP|182.254.92.144:443:longcloud.weixin.com:BackupIP proxytype:0 useproxy:false
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 454][_vecaddr size:6, m_timeout:10000, m_interval:4000, m_error_interval:4000, m_max_connect:3, @0x7FD46F7FCE60
 [I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:101.227.162.154]:80
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:58.247.204.157]:8080
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 518][index:0, @0x7F6B7DDDDE60, addr:(101.227.162.154:8080), socket:27, connect
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:180.163.15.172]:8080
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:101.227.162.154]:443
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:180.163.15.172]:443
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:101.227.162.154]:5000
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 460][complex.conn [::ffff:182.254.92.144]:443
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 518][index:0, @0x7FD46F7FCE60, addr:(101.227.162.154:80), socket:27, connect
 [I][MMTLS][mmtls_client_credential_storage.cpp, GetInstance, 187][s_Instance = new ClientCredStorage()----------------------------
 [I][MMTLS][mmtls_client_credential_storage.cpp, ClientCredStorage, 49][new ClientCredStorage. key_dir_=/tmp/.
 [I][MMTLS][mmtls_client_credential_storage.cpp, LoadRefreshPskFromFile, 293][mmtls: MAX_SERIALIZED_PSK_LEN=8192, read read size=228
@@ -83,88 +83,91 @@ interface name:ens33, AF_INET6, ip:fe80::1e3d:c224:d288:f4f0
 [E][MMTLS][mmtls_client_credential_storage.cpp, GetPsk, 85][serialized_acess_psk_ is empty.
 [E][MMTLS][mmtls_client_channel.cpp, DoInit, 389][get access psk fail, ret [-20198]
 [I][mars::mmext][mmtls_client_credential_manager.cpp, GetValidPsk, 41][mmtls: psktype=2, len=212
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 556][index:0, @0x7F6B7DDDDE60, sock:27, (101.227.162.154:8080), connected Rtt:0, 
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 556][index:0, @0x7F6B7DDDDE60, sock:27, (101.227.162.154:8080), all buffer send:362, m_send_buf:0
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 556][index:0, @0x7FD46F7FCE60, sock:27, (101.227.162.154:80), connected Rtt:30, 
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 556][index:0, @0x7FD46F7FCE60, sock:27, (101.227.162.154:80), all buffer send:362, m_send_buf:0
 [I][MMTLS][mmtls_client_credential_storage.cpp, SavePsk, 73][PskType=1, serialized_client_psk length = 147.
 [I][MMTLS][mmtls_client_credential_storage.cpp, GenerateSaveFileKey, 30][device_info=.
 [I][MMTLS][mmtls_client_credential_storage.cpp, SavePsk, 73][PskType=2, serialized_client_psk length = 212.
 [I][mars::mmext][longlink_mmtls_support.h, OnHandShake, 71][mmtls:OnHandShake,  handshake_complete_=false, state.stage()=201
-[I][mars::mmext][longlink_with_mmtls.cc, OnVerifyRecv, 203][mmtls:this:@0x7f6b7ddde3e0, _index:0, addr:[::ffff:101.227.162.154]:8080:, connected_index_=0
-[I][mars::mmext][longlink_with_mmtls.cc, OnVerifyRecv, 222][mmtls:this:@0x7f6b7ddde3e0, _index:0, addr:[::ffff:101.227.162.154]:8080:, m_mmtls_observer:@0x7f6b68001220, m_mmtls_channel:@0x7f6b68004670
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 556][index:0, @0x7F6B7DDDDE60, sock:27, (101.227.162.154:8080), first buffer recv:585, m_recv_buf:0
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 588][index:0, sock:27, suc ConnectImpatient:101.227.162.154:8080, RTT:(0, 73), @0x7F6B7DDDDE60
-[I][mars::comm][complexconnect.cc, ConnectImpatient, 624][retsocket:27, connrtt:0, conntotalrtt:73, totalcost:73, @0x7F6B7DDDDE60
-[I][mars::mmext][longlink_with_mmtls.cc, __RunConnect, 478][task socket connect suc sock:27, host:longcloud.weixin.com, ip:101.227.162.154, port:8080, iptype:DNSIP, costtime:73, rtt:0, totalcost:73, index:0, net:1
+[I][mars::mmext][longlink_with_mmtls.cc, OnVerifyRecv, 203][mmtls:this:@0x7fd46f7fd3e0, _index:0, addr:[::ffff:101.227.162.154]:80:, connected_index_=0
+[I][mars::mmext][longlink_with_mmtls.cc, OnVerifyRecv, 222][mmtls:this:@0x7fd46f7fd3e0, _index:0, addr:[::ffff:101.227.162.154]:80:, m_mmtls_observer:@0x7fd460001330, m_mmtls_channel:@0x7fd460004860
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 556][index:0, @0x7FD46F7FCE60, sock:27, (101.227.162.154:80), first buffer recv:584, m_recv_buf:0
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 588][index:0, sock:27, suc ConnectImpatient:101.227.162.154:80, RTT:(30, 62), @0x7FD46F7FCE60
+[I][mars::comm][complexconnect.cc, ConnectImpatient, 624][retsocket:27, connrtt:30, conntotalrtt:62, totalcost:62, @0x7FD46F7FCE60
+[I][mars::mmext][longlink_with_mmtls.cc, __RunConnect, 478][task socket connect suc sock:27, host:longcloud.weixin.com, ip:101.227.162.154, port:80, iptype:DNSIP, costtime:62, rtt:30, totalcost:62, index:0, net:1
 [I][mars::stn][longlink.cc, __ConnectStatus, 349][connect status from:1 to:2, nettype:1
-[I][mars::mmext][longlink_with_mmtls.cc, ~LongLinkConnectObserverWithMMTLS, 79][mmtls:this:@0x7f6b7ddde3e0:, connected_index_=0, let LongLinkWithMMTLS delete it
+[I][mars::mmext][longlink_with_mmtls.cc, ~LongLinkConnectObserverWithMMTLS, 79][mmtls:this:@0x7fd46f7fd3e0:, connected_index_=0, let LongLinkWithMMTLS delete it
 [I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][-> RedoTasks 
 [I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][<- RedoTasks +0, 
 [I][mars::mmext][mmtls_ctrl_info.cc, MMTLSCtrlInfo, 38][ MmtlsCtrlInfo.use_mmtls=true
 [I][mars::stn][longlink_connect_monitor.cc, __OnLongLinkStatuChanged, 224][cancel auto connect
-[I][mars::mmext][alarm.h, Alarm, 56][handler:(140099666712320,35)
-[I][mars::mmext][alarm.h, Alarm, 56][handler:(140099666712320,37)
-[I][mars::comm][alarm.cc, Start, 68][alarm id:140099649922432, after:8000, seq:3, po.reg.q:140099666712320,po.reg.s:0,po.s:39
-[I][mars::comm][alarm.cc, Start, 68][alarm id:140099649922256, after:210000, seq:4, po.reg.q:140099666712320,po.reg.s:0,po.s:40
+[I][mars::mmext][alarm.h, Alarm, 56][handler:(140550601619200,35)
+[I][mars::mmext][alarm.h, Alarm, 56][handler:(140550601619200,37)
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140550380443008, after:8000, seq:3, po.reg.q:140550601619200,po.reg.s:0,po.s:39
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140550380442832, after:210000, seq:4, po.reg.q:140550601619200,po.reg.s:0,po.s:40
 [I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 517][start noop taskid:4294967295, cmdid:6,  last:(0,0), next:210000
-[I][mars::stn][longlink_task_manager.cc, __RunOnStartTask, 377][task add into longlink readwrite suc cgi:, cmdid:3136, taskid:1, size:95, timeout(firstpkg:12, rw:17, task:40), retry:1, curtime:77099777, start_send_time:77099698,
-[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:94392206312944, seq:2, after:240000
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140550380442832, seq:4, after:210000
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140550380442832, after:210000, seq:5, po.reg.q:140550601619200,po.reg.s:0,po.s:41
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 606][task socket send sock:27, all send:97, count:2, sub send taskid:0, cmdid:0, , len(S:60, 60/60), sub send taskid:4294967295, cmdid:6, , len(S:37, 37/37), 
+[I][mars::stn][longlink_task_manager.cc, __RunOnStartTask, 377][task add into longlink readwrite suc cgi:, cmdid:3136, taskid:1, size:95, timeout(firstpkg:12, rw:17, task:40), retry:1, curtime:7395403, start_send_time:7395340,
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:93937932603216, seq:2, after:240000
 [I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][-> RedoTasks 
 [I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][<- RedoTasks +0, 
 [I][mars::stn][net_core.cc, __ConnStatusCallBack, 708][reportNetConnectInfo all_connstatus:4, longlink_connstatus:4
-[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140099649922256, seq:4, after:210000
-[I][mars::comm][alarm.cc, Start, 68][alarm id:140099649922256, after:210000, seq:5, po.reg.q:140099666712320,po.reg.s:0,po.s:42
-[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 606][task socket send sock:27, all send:229, count:3, sub send taskid:0, cmdid:0, , len(S:60, 60/60), sub send taskid:4294967295, cmdid:6, , len(S:37, 37/37), sub send taskid:1, cmdid:3136, , len(S:132, 132/132), 
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140550380442832, seq:5, after:210000
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140550380442832, after:210000, seq:6, po.reg.q:140550601619200,po.reg.s:0,po.s:45
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 606][task socket send sock:27, all send:132, count:1, sub send taskid:1, cmdid:3136, , len(S:132, 132/132), 
 [I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:37, buff len:37
 [I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:4294967295, cmdid:1000000006, , packlen:(16/16)
 [I][mars::stn][longlink.cc, __NoopResp, 316][end noop
-[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140099649922432, seq:3, after:8000
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140550380443008, seq:3, after:8000
 [I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:124, buff len:124
 [I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:1, cmdid:3136, , packlen:(103/103)
-[I][mars::stn][longlink_task_manager.cc, __SingleRespHandle, 411][task end callback  long cmdid:3136, err(0, 0, 0), svr(101.227.162.154:8080, DNSIP, longcloud.weixin.com), cli(, 192.168.107.131, n:no_ssid_wifi, sig:0), cost(s:95, r:87, c:0, rw:44), all:123, retry:1, cgi:, taskid:1, tid:33467
+[I][mars::stn][longlink_task_manager.cc, __SingleRespHandle, 411][task end callback  long cmdid:3136, err(0, 0, 0), svr(101.227.162.154:80, DNSIP, longcloud.weixin.com), cli(, 192.168.157.136, n:no_ssid_wifi, sig:0), cost(s:95, r:87, c:30, rw:65), all:129, retry:1, cgi:, taskid:1, tid:11092
 [I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][-> RedoTasks 
 [I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][<- RedoTasks +0, 
-[T][ConfService.cpp][148][33457][2020-03-12 06:21:19.767020] JoinRoom, m_imRoomId[0]
+[T][ConfService.cpp][150][11083][2020-03-13 14:43:07.850455] JoinRoom, m_imRoomId[0]
 
 [I][mars::stn][net_core.cc, operator, 300][task start long short taskid:10, cmdid:3361, need_authed:true, cgi:/cloudim/cloud-bin/cloudvoipmtjoin, channel_select:2, limit_flow:true, host:101.227.162.141, send_only:false, cmdid:3361, server_process_cost:-1, retrycount:-1,  channel_strategy:0,  total_timetout:-1, network_status_sensitive:false, priority:3, report_arg:
-[I][mars::stn][longlink_task_manager.cc, __RunOnStartTask, 377][task add into longlink readwrite suc cgi:/cloudim/cloud-bin/cloudvoipmtjoin, cmdid:3361, taskid:10, size:219, timeout(firstpkg:12, rw:17, task:40), retry:1, curtime:77102991, start_send_time:77102991,
-[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140099649922256, seq:5, after:210000
-[I][mars::comm][alarm.cc, Start, 68][alarm id:140099649922256, after:210000, seq:6, po.reg.q:140099666712320,po.reg.s:0,po.s:49
+[I][mars::stn][longlink_task_manager.cc, __RunOnStartTask, 377][task add into longlink readwrite suc cgi:/cloudim/cloud-bin/cloudvoipmtjoin, cmdid:3361, taskid:10, size:219, timeout(firstpkg:12, rw:17, task:40), retry:1, curtime:7401640, start_send_time:7401640,
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140550380442832, seq:6, after:210000
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140550380442832, after:210000, seq:7, po.reg.q:140550601619200,po.reg.s:0,po.s:50
 [I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 606][task socket send sock:27, all send:256, count:1, sub send taskid:10, cmdid:3361, /cloudim/cloud-bin/cloudvoipmtjoin, len(S:256, 256/256), 
-[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:364, buff len:364
-[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:10, cmdid:3361, /cloudim/cloud-bin/cloudvoipmtjoin, packlen:(343/343)
-[I][mars::stn][longlink_task_manager.cc, __SingleRespHandle, 411][task end callback  long cmdid:3361, err(0, 0, 0), svr(101.227.162.154:8080, DNSIP, longcloud.weixin.com), cli(, 192.168.107.131, n:no_ssid_wifi, sig:0), cost(s:219, r:327, c:0, rw:124), all:125, retry:1, cgi:/cloudim/cloud-bin/cloudvoipmtjoin, taskid:10, tid:33467
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:354, buff len:354
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:10, cmdid:3361, /cloudim/cloud-bin/cloudvoipmtjoin, packlen:(333/333)
+[I][mars::stn][longlink_task_manager.cc, __SingleRespHandle, 411][task end callback  long cmdid:3361, err(0, 0, 0), svr(101.227.162.154:80, DNSIP, longcloud.weixin.com), cli(, 192.168.157.136, n:no_ssid_wifi, sig:0), cost(s:219, r:317, c:30, rw:120), all:121, retry:1, cgi:/cloudim/cloud-bin/cloudvoipmtjoin, taskid:10, tid:11092
 [I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][-> RedoTasks 
 [I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][<- RedoTasks +0, 
-[T][ConfService.cpp][191][33457][2020-03-12 06:21:19.895516] -----OnConfEvent, eventType=JoinSucc(3), errCode=0
+[T][ConfService.cpp][193][11083][2020-03-13 14:43:07.973242] -----OnConfEvent, eventType=JoinSucc(3), errCode=0
 
-[T][ConfService.cpp][191][33457][2020-03-12 06:21:19.895543] -----OnConfEvent, eventType=MemberChange(5), errCode=0
+[T][ConfService.cpp][193][11083][2020-03-13 14:43:07.973270] -----OnConfEvent, eventType=MemberChange(5), errCode=0
 
-[T][ConfService.cpp][211][33457][2020-03-12 06:21:19.895550] imroomid[173005338686394945], member_size[1]
+[T][ConfService.cpp][213][11083][2020-03-13 14:43:07.973276] imroomid[173022117627520759], member_size[2]
 
-[T][ConfService.cpp][191][33457][2020-03-12 06:21:19.895557] -----OnConfEvent, eventType=AVMemberChange(6), errCode=0
+[T][ConfService.cpp][193][11083][2020-03-13 14:43:07.973283] -----OnConfEvent, eventType=AVMemberChange(6), errCode=0
 
-[T][ConfService.cpp][218][33457][2020-03-12 06:21:19.895560] imroomid[173005338686394945], member_size[1]
+[T][ConfService.cpp][220][11083][2020-03-13 14:43:07.973286] imroomid[173022117627520759], member_size[2]
 
 [I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:76, buff len:76
-[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:1584019279, cmdid:3092, , packlen:(55/55)
-[I][mars::stn][longlink_task_manager.cc, __OnResponse, 528][task push seq:1584019279, cmdid:3092, len:(39, 0)
-[I][mars::stn][net_core.cc, __OnPush, 557][task push seq:1584019279, cmdid:3092, len:39
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:1584081788, cmdid:3092, , packlen:(55/55)
+[I][mars::stn][longlink_task_manager.cc, __OnResponse, 528][task push seq:1584081788, cmdid:3092, len:(39, 0)
+[I][mars::stn][net_core.cc, __OnPush, 557][task push seq:1584081788, cmdid:3092, len:39
 [I][NetworkService][NetworkService.cpp, OnPush, 192][-> OnPush 
 [I][NetworkService][NetworkService.cpp, OnPush, 192][<- OnPush +0, 
 [I][mars::stn][net_core.cc, operator, 300][task start long short taskid:13, cmdid:3136, need_authed:true, cgi:, channel_select:2, limit_flow:true, host:101.227.162.141, send_only:false, cmdid:3136, server_process_cost:-1, retrycount:-1,  channel_strategy:0,  total_timetout:-1, network_status_sensitive:false, priority:3, report_arg:
-[I][mars::stn][longlink_task_manager.cc, __RunOnStartTask, 377][task add into longlink readwrite suc cgi:, cmdid:3136, taskid:13, size:95, timeout(firstpkg:12, rw:17, task:40), retry:1, curtime:77103143, start_send_time:77103143,
-[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140099649922256, seq:6, after:210000
-[I][mars::comm][alarm.cc, Start, 68][alarm id:140099649922256, after:210000, seq:7, po.reg.q:140099666712320,po.reg.s:0,po.s:55
+[I][mars::stn][longlink_task_manager.cc, __RunOnStartTask, 377][task add into longlink readwrite suc cgi:, cmdid:3136, taskid:13, size:95, timeout(firstpkg:12, rw:17, task:40), retry:1, curtime:7401783, start_send_time:7401783,
+[I][mars::comm][alarm.cc, Cancel, 94][alarm cancel id:140550380442832, seq:7, after:210000
+[I][mars::comm][alarm.cc, Start, 68][alarm id:140550380442832, after:210000, seq:8, po.reg.q:140550601619200,po.reg.s:0,po.s:56
 [I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 606][task socket send sock:27, all send:132, count:1, sub send taskid:13, cmdid:3136, , len(S:132, 132/132), 
-[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:325, buff len:325
-[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:13, cmdid:3136, , packlen:(304/304)
-[I][mars::stn][longlink_task_manager.cc, __SingleRespHandle, 411][task end callback  long cmdid:3136, err(0, 0, 0), svr(101.227.162.154:8080, DNSIP, longcloud.weixin.com), cli(, 192.168.107.131, n:no_ssid_wifi, sig:0), cost(s:95, r:288, c:0, rw:59), all:59, retry:1, cgi:, taskid:13, tid:33467
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 744][task socket recv sock:27, recv len:341, buff len:341
+[I][mars::mmext][longlink_with_mmtls.cc, __RunReadWrite, 777][task socket recv sock:27, pack recv finish taskid:13, cmdid:3136, , packlen:(320/320)
+[I][mars::stn][longlink_task_manager.cc, __SingleRespHandle, 411][task end callback  long cmdid:3136, err(0, 0, 0), svr(101.227.162.154:80, DNSIP, longcloud.weixin.com), cli(, 192.168.157.136, n:no_ssid_wifi, sig:0), cost(s:95, r:304, c:30, rw:46), all:46, retry:1, cgi:, taskid:13, tid:11092
 [I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][-> RedoTasks 
 [I][mars::stn][zombie_task_manager.cc, RedoTasks, 117][<- RedoTasks +0, 
-[T][ConfService.cpp][191][33457][2020-03-12 06:21:20.014252] -----OnConfEvent, eventType=TalkSucc(7), errCode=0
+[T][ConfService.cpp][193][11083][2020-03-13 14:43:08.322624] -----OnConfEvent, eventType=TalkSucc(7), errCode=0
 
 jaylen,i:0
-codec name:libx264, id:28, GetPixelFormat:5
+codec name:libx264, id:28, GetPixelFormat:26
 v=0
 o=- 0 0 IN IP4 127.0.0.1
 s=No Name
@@ -176,182 +179,954 @@ a=rtpmap:96 H264/90000
 a=fmtp:96 packetization-mode=1
 a=control:streamid=0
 
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1856,1856, 1856,0
-linesize:1856,1856, 1856,0
-pixel_format:5
-linesize:1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:8512FE7DDBE40DCFA82B5EB8883482BA
+send_md5:8512FE7DDBE40DCFA82B5EB8883482BA
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:08.902615] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01785C1CCF36313F936161C68A7203F0
+send_md5:01785C1CCF36313F936161C68A7203F0
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:08.941240] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:08.941266] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01785C1CCF36313F936161C68A7203F0
+send_md5:01785C1CCF36313F936161C68A7203F0
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:08.979090] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01785C1CCF36313F936161C68A7203F0
+send_md5:01785C1CCF36313F936161C68A7203F0
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.021150] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01785C1CCF36313F936161C68A7203F0
+send_md5:01785C1CCF36313F936161C68A7203F0
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.061958] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:09.061983] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01785C1CCF36313F936161C68A7203F0
+send_md5:01785C1CCF36313F936161C68A7203F0
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.102275] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01785C1CCF36313F936161C68A7203F0
+send_md5:01785C1CCF36313F936161C68A7203F0
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.142274] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01785C1CCF36313F936161C68A7203F0
+send_md5:01785C1CCF36313F936161C68A7203F0
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.183340] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:09.183368] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01785C1CCF36313F936161C68A7203F0
+send_md5:01785C1CCF36313F936161C68A7203F0
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.222916] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01785C1CCF36313F936161C68A7203F0
+send_md5:01785C1CCF36313F936161C68A7203F0
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.268650] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:1C2C1EB0EB2397C081C60D195CA62DBC
+send_md5:1C2C1EB0EB2397C081C60D195CA62DBC
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.305218] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:09.305242] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:BFD0D87545FB96C920F05E907BAE2BCF
+send_md5:BFD0D87545FB96C920F05E907BAE2BCF
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.346650] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:659CA43BF1BB73E1B42285ECDEC233FF
+send_md5:659CA43BF1BB73E1B42285ECDEC233FF
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.387225] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:7B7A1B9FF423135A52EB7A97D1B4E96E
+send_md5:7B7A1B9FF423135A52EB7A97D1B4E96E
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.432048] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:09.432106] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:2E92D1520F347856AE0529822137B92B
+send_md5:2E92D1520F347856AE0529822137B92B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.470238] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:73F7AF0381055CC08AC0B7F3BF084F73
+send_md5:73F7AF0381055CC08AC0B7F3BF084F73
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.510385] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:44C073C92370D1177452EF6E3A208992
+send_md5:44C073C92370D1177452EF6E3A208992
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.564650] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:09.564701] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:1B03310C6BD40B9A7E5ED808FAA82D1E
+send_md5:1B03310C6BD40B9A7E5ED808FAA82D1E
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.591086] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FB2491568423A0A0692BCD304B1F4D23
+send_md5:FB2491568423A0A0692BCD304B1F4D23
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.632181] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:10DB58CD2F7E830582ABE0E39E61900B
+send_md5:10DB58CD2F7E830582ABE0E39E61900B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.673277] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:09.673304] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:C6A117762C82F60704CA0D80956F17B3
+send_md5:C6A117762C82F60704CA0D80956F17B3
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.716003] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:C6A117762C82F60704CA0D80956F17B3
+send_md5:C6A117762C82F60704CA0D80956F17B3
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.753515] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:C6A117762C82F60704CA0D80956F17B3
+send_md5:C6A117762C82F60704CA0D80956F17B3
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.794487] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:09.794516] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:C6A117762C82F60704CA0D80956F17B3
+send_md5:C6A117762C82F60704CA0D80956F17B3
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.836041] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:9735E2247969DE43F781E57770F89849
+send_md5:9735E2247969DE43F781E57770F89849
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.876455] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:9735E2247969DE43F781E57770F89849
+send_md5:9735E2247969DE43F781E57770F89849
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.917356] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:09.917386] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:9735E2247969DE43F781E57770F89849
+send_md5:9735E2247969DE43F781E57770F89849
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:09.957052] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:9735E2247969DE43F781E57770F89849
+send_md5:9735E2247969DE43F781E57770F89849
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.010251] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:9735E2247969DE43F781E57770F89849
+send_md5:9735E2247969DE43F781E57770F89849
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.044364] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:10.044396] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:840E07ACCF29175D66D22714DB862705
+send_md5:840E07ACCF29175D66D22714DB862705
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.081024] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:840E07ACCF29175D66D22714DB862705
+send_md5:840E07ACCF29175D66D22714DB862705
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.119619] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:840E07ACCF29175D66D22714DB862705
+send_md5:840E07ACCF29175D66D22714DB862705
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.160818] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:10.160840] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:78528174E14523371367F8580096FE18
+send_md5:78528174E14523371367F8580096FE18
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.202340] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:78528174E14523371367F8580096FE18
+send_md5:78528174E14523371367F8580096FE18
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.253217] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:78528174E14523371367F8580096FE18
+send_md5:78528174E14523371367F8580096FE18
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.283743] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:10.283768] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:78528174E14523371367F8580096FE18
+send_md5:78528174E14523371367F8580096FE18
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.326622] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:78528174E14523371367F8580096FE18
+send_md5:78528174E14523371367F8580096FE18
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.364887] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:78528174E14523371367F8580096FE18
+send_md5:78528174E14523371367F8580096FE18
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.407370] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:10.407399] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:78528174E14523371367F8580096FE18
+send_md5:78528174E14523371367F8580096FE18
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.446315] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:78528174E14523371367F8580096FE18
+send_md5:78528174E14523371367F8580096FE18
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.490078] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:78528174E14523371367F8580096FE18
+send_md5:78528174E14523371367F8580096FE18
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.528598] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:10.528621] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:BF033557AFCADC55424A0C20A35E0937
+send_md5:BF033557AFCADC55424A0C20A35E0937
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.570813] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:7D940FB4E7D73F1D5423385B9A59267C
+send_md5:7D940FB4E7D73F1D5423385B9A59267C
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.609726] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.660720] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:10.660782] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.698635] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.730935] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.772109] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.813277] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:10.813299] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.853947] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.894603] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.946941] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:10.946994] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:10.976363] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.017226] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.058716] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:11.058752] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.099454] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:67EA56DD22666B5FF6EBB17636E3921B
+send_md5:67EA56DD22666B5FF6EBB17636E3921B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.140215] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5483DF3762A326D4878DD420FFE3487A
+send_md5:5483DF3762A326D4878DD420FFE3487A
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.180486] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:11.180516] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5483DF3762A326D4878DD420FFE3487A
+send_md5:5483DF3762A326D4878DD420FFE3487A
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.232858] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5483DF3762A326D4878DD420FFE3487A
+send_md5:5483DF3762A326D4878DD420FFE3487A
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.263163] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5483DF3762A326D4878DD420FFE3487A
+send_md5:5483DF3762A326D4878DD420FFE3487A
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.303356] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:11.303381] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5483DF3762A326D4878DD420FFE3487A
+send_md5:5483DF3762A326D4878DD420FFE3487A
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.343324] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5483DF3762A326D4878DD420FFE3487A
+send_md5:5483DF3762A326D4878DD420FFE3487A
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.393942] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B5D869F1A041F3834B5A851057BA50B9
+send_md5:B5D869F1A041F3834B5A851057BA50B9
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.425871] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:11.425898] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B5D869F1A041F3834B5A851057BA50B9
+send_md5:B5D869F1A041F3834B5A851057BA50B9
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.465977] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B5D869F1A041F3834B5A851057BA50B9
+send_md5:B5D869F1A041F3834B5A851057BA50B9
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.507732] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B5D869F1A041F3834B5A851057BA50B9
+send_md5:B5D869F1A041F3834B5A851057BA50B9
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.548705] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:11.548730] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B5D869F1A041F3834B5A851057BA50B9
+send_md5:B5D869F1A041F3834B5A851057BA50B9
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.588587] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B5D869F1A041F3834B5A851057BA50B9
+send_md5:B5D869F1A041F3834B5A851057BA50B9
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.643768] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B5D869F1A041F3834B5A851057BA50B9
+send_md5:B5D869F1A041F3834B5A851057BA50B9
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.672965] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:11.673604] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B5D869F1A041F3834B5A851057BA50B9
+send_md5:B5D869F1A041F3834B5A851057BA50B9
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.713390] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:061F022E633A6835C7665A96337C72B4
+send_md5:061F022E633A6835C7665A96337C72B4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.752310] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:061F022E633A6835C7665A96337C72B4
+send_md5:061F022E633A6835C7665A96337C72B4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.793405] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:11.793437] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:061F022E633A6835C7665A96337C72B4
+send_md5:061F022E633A6835C7665A96337C72B4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.833721] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:061F022E633A6835C7665A96337C72B4
+send_md5:061F022E633A6835C7665A96337C72B4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.874743] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:D2B0903BC3F1F420C798DDBE46475801
+send_md5:D2B0903BC3F1F420C798DDBE46475801
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.921239] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:11.921271] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:D2B0903BC3F1F420C798DDBE46475801
+send_md5:D2B0903BC3F1F420C798DDBE46475801
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.956473] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:D2B0903BC3F1F420C798DDBE46475801
+send_md5:D2B0903BC3F1F420C798DDBE46475801
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:11.997666] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:D2B0903BC3F1F420C798DDBE46475801
+send_md5:D2B0903BC3F1F420C798DDBE46475801
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.039799] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:12.039830] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5820AC02FEFC0A27D8CA3F9FE9355F36
+send_md5:5820AC02FEFC0A27D8CA3F9FE9355F36
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.079249] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:3F44DE6E22283C4F6360EF03EE6CF94E
+send_md5:3F44DE6E22283C4F6360EF03EE6CF94E
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.124309] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:56A838CDBF3E46891D9816D307D2180A
+send_md5:56A838CDBF3E46891D9816D307D2180A
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.162969] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:12.163008] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:82CE61B3A6210D66856CD196517211C4
+send_md5:82CE61B3A6210D66856CD196517211C4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.204286] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:D61D63E8A88D96A6AF048CDE0E27ACFA
+send_md5:D61D63E8A88D96A6AF048CDE0E27ACFA
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.253834] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:7935F18EF42EA36A67C72742BFCFDEA9
+send_md5:7935F18EF42EA36A67C72742BFCFDEA9
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.287482] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:12.287504] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:702F5C731B7E571B53B215326ECCFA22
+send_md5:702F5C731B7E571B53B215326ECCFA22
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.329582] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:AFA7D1001990DC7CFF43435CB24C3060
+send_md5:AFA7D1001990DC7CFF43435CB24C3060
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.368876] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:0054988D446379215AFBAC69C60A1427
+send_md5:0054988D446379215AFBAC69C60A1427
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.406884] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:12.406908] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:92E9D07467B3868D7F4BBD1C33AB6E27
+send_md5:92E9D07467B3868D7F4BBD1C33AB6E27
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.447008] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:7B4D2831C4E6F06F31B5BD221F9621F7
+send_md5:7B4D2831C4E6F06F31B5BD221F9621F7
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.487593] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:AF13464EF11A4C5033631B71D02B5B32
+send_md5:AF13464EF11A4C5033631B71D02B5B32
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.528392] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:12.528415] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:F82B21DEBC048FDC49CD9E29998F533C
+send_md5:F82B21DEBC048FDC49CD9E29998F533C
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.570364] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:70E87BB66BA1268533D463AB365DF822
+send_md5:70E87BB66BA1268533D463AB365DF822
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.609486] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:70E87BB66BA1268533D463AB365DF822
+send_md5:70E87BB66BA1268533D463AB365DF822
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.650505] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:70E87BB66BA1268533D463AB365DF822
+send_md5:70E87BB66BA1268533D463AB365DF822
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.692068] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:12.692097] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:70E87BB66BA1268533D463AB365DF822
+send_md5:70E87BB66BA1268533D463AB365DF822
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.732346] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:70E87BB66BA1268533D463AB365DF822
+send_md5:70E87BB66BA1268533D463AB365DF822
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.773504] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:70E87BB66BA1268533D463AB365DF822
+send_md5:70E87BB66BA1268533D463AB365DF822
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.815072] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:12.815101] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:70E87BB66BA1268533D463AB365DF822
+send_md5:70E87BB66BA1268533D463AB365DF822
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.855834] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:9E518DC5255303FA9CD6E32C0E8D490E
+send_md5:9E518DC5255303FA9CD6E32C0E8D490E
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.895999] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:9E518DC5255303FA9CD6E32C0E8D490E
+send_md5:9E518DC5255303FA9CD6E32C0E8D490E
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.938123] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:12.938163] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:9E518DC5255303FA9CD6E32C0E8D490E
+send_md5:9E518DC5255303FA9CD6E32C0E8D490E
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:12.977844] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:9E518DC5255303FA9CD6E32C0E8D490E
+send_md5:9E518DC5255303FA9CD6E32C0E8D490E
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.017898] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:16D117B3A8B64E58AFBD2B67E2736B4D
+send_md5:16D117B3A8B64E58AFBD2B67E2736B4D
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.059387] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:13.059422] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:16D117B3A8B64E58AFBD2B67E2736B4D
+send_md5:16D117B3A8B64E58AFBD2B67E2736B4D
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.113047] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:F6E676F7645EA380C34F79451DFFD399
+send_md5:F6E676F7645EA380C34F79451DFFD399
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.140731] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:F6E676F7645EA380C34F79451DFFD399
+send_md5:F6E676F7645EA380C34F79451DFFD399
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.182510] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:13.182542] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:69F564FCF7914FE92560B631FF51CC5F
+send_md5:69F564FCF7914FE92560B631FF51CC5F
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.222178] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5C399387CA4BB9E01E6585AD99828CED
+send_md5:5C399387CA4BB9E01E6585AD99828CED
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.262959] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5C399387CA4BB9E01E6585AD99828CED
+send_md5:5C399387CA4BB9E01E6585AD99828CED
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.304135] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:13.304168] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5C399387CA4BB9E01E6585AD99828CED
+send_md5:5C399387CA4BB9E01E6585AD99828CED
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.355911] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5C399387CA4BB9E01E6585AD99828CED
+send_md5:5C399387CA4BB9E01E6585AD99828CED
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.389865] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:6E3DB5152F7BEC65357DCF745BD2AFA1
+send_md5:6E3DB5152F7BEC65357DCF745BD2AFA1
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.428188] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:13.428227] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:6E3DB5152F7BEC65357DCF745BD2AFA1
+send_md5:6E3DB5152F7BEC65357DCF745BD2AFA1
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.478281] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:6E3DB5152F7BEC65357DCF745BD2AFA1
+send_md5:6E3DB5152F7BEC65357DCF745BD2AFA1
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.509702] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:6E3DB5152F7BEC65357DCF745BD2AFA1
+send_md5:6E3DB5152F7BEC65357DCF745BD2AFA1
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.549010] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:13.549032] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:6E3DB5152F7BEC65357DCF745BD2AFA1
+send_md5:6E3DB5152F7BEC65357DCF745BD2AFA1
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.589110] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B79CBE313CA8714BB74D7015718A8B46
+send_md5:B79CBE313CA8714BB74D7015718A8B46
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.643544] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B79CBE313CA8714BB74D7015718A8B46
+send_md5:B79CBE313CA8714BB74D7015718A8B46
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.671961] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:13.671993] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B79CBE313CA8714BB74D7015718A8B46
+send_md5:B79CBE313CA8714BB74D7015718A8B46
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.723571] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B79CBE313CA8714BB74D7015718A8B46
+send_md5:B79CBE313CA8714BB74D7015718A8B46
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.752336] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B79CBE313CA8714BB74D7015718A8B46
+send_md5:B79CBE313CA8714BB74D7015718A8B46
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.794075] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:13.794104] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B79CBE313CA8714BB74D7015718A8B46
+send_md5:B79CBE313CA8714BB74D7015718A8B46
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.833423] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:83B782648E0AD3A0D28B195D9CDEE4F5
+send_md5:83B782648E0AD3A0D28B195D9CDEE4F5
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.879728] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:D7EDA2BE94933BA75A2DD9DAF371354A
+send_md5:D7EDA2BE94933BA75A2DD9DAF371354A
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.916200] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:13.916254] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:E40F49E1BF057F74DCD68C4F7F422846
+send_md5:E40F49E1BF057F74DCD68C4F7F422846
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.956752] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:0F95F1CCCF89B3C56601A49F57323964
+send_md5:0F95F1CCCF89B3C56601A49F57323964
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:13.998813] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:7244A068B03FC1B0A05171A9EEA136F4
+send_md5:7244A068B03FC1B0A05171A9EEA136F4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.039314] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:14.039348] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:D645BF47890585FEDAC6277DF55EBA98
+send_md5:D645BF47890585FEDAC6277DF55EBA98
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.079582] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:04613EC97CA8E409D52026DBBE0DB3C9
+send_md5:04613EC97CA8E409D52026DBBE0DB3C9
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.139081] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:328F641DCA9A1A2843820A2367E58031
+send_md5:328F641DCA9A1A2843820A2367E58031
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.160717] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:14.160740] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5365ABA5C49B38E3D0A36205B1F8A772
+send_md5:5365ABA5C49B38E3D0A36205B1F8A772
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.202882] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FBDE81F8D795D4B4A8CF22EA0FDCC0B4
+send_md5:FBDE81F8D795D4B4A8CF22EA0FDCC0B4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.242066] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:1D60C887F2094305DBAD655824F29FA1
+send_md5:1D60C887F2094305DBAD655824F29FA1
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.283654] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:14.283690] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:75F3BE0A6D6E0F5A782884B760C0E868
+send_md5:75F3BE0A6D6E0F5A782884B760C0E868
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.322822] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:5664F8E18EEC5AB5A9E7D52E71EC99A4
+send_md5:5664F8E18EEC5AB5A9E7D52E71EC99A4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.364116] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:AF9F90556F9948E46B5BC9963A110F6D
+send_md5:AF9F90556F9948E46B5BC9963A110F6D
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.418784] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:14.418834] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:AF9F90556F9948E46B5BC9963A110F6D
+send_md5:AF9F90556F9948E46B5BC9963A110F6D
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.445097] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:AF9F90556F9948E46B5BC9963A110F6D
+send_md5:AF9F90556F9948E46B5BC9963A110F6D
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.497263] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:0ECE256572CAB1D189F013BB92751A2E
+send_md5:0ECE256572CAB1D189F013BB92751A2E
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.530027] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:14.530059] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:F1E74A1EA87942D8D7281470C6695AEE
+send_md5:F1E74A1EA87942D8D7281470C6695AEE
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.569489] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:F1E74A1EA87942D8D7281470C6695AEE
+send_md5:F1E74A1EA87942D8D7281470C6695AEE
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.607994] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:CA6DD22E802A457AA31AB35DE63F9379
+send_md5:CA6DD22E802A457AA31AB35DE63F9379
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.654257] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:14.654293] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:CA6DD22E802A457AA31AB35DE63F9379
+send_md5:CA6DD22E802A457AA31AB35DE63F9379
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.699496] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01FC5B48C79395875747B218D796B656
+send_md5:01FC5B48C79395875747B218D796B656
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.730640] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01FC5B48C79395875747B218D796B656
+send_md5:01FC5B48C79395875747B218D796B656
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.771702] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:01FC5B48C79395875747B218D796B656
+send_md5:01FC5B48C79395875747B218D796B656
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.813326] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:14.813360] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:3E8F3C826C73A82FF1522C955FD95C9C
+send_md5:3E8F3C826C73A82FF1522C955FD95C9C
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.854869] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:3E8F3C826C73A82FF1522C955FD95C9C
+send_md5:3E8F3C826C73A82FF1522C955FD95C9C
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.893546] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:3E8F3C826C73A82FF1522C955FD95C9C
+send_md5:3E8F3C826C73A82FF1522C955FD95C9C
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.935745] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:14.935774] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:3E8F3C826C73A82FF1522C955FD95C9C
+send_md5:3E8F3C826C73A82FF1522C955FD95C9C
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:14.976567] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:3E8F3C826C73A82FF1522C955FD95C9C
+send_md5:3E8F3C826C73A82FF1522C955FD95C9C
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.016055] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:3E8F3C826C73A82FF1522C955FD95C9C
+send_md5:3E8F3C826C73A82FF1522C955FD95C9C
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.057974] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:15.058000] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:123D01C4B017B856F5EF93D1CF20B7FB
+send_md5:123D01C4B017B856F5EF93D1CF20B7FB
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.096980] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:123D01C4B017B856F5EF93D1CF20B7FB
+send_md5:123D01C4B017B856F5EF93D1CF20B7FB
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.138605] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:123D01C4B017B856F5EF93D1CF20B7FB
+send_md5:123D01C4B017B856F5EF93D1CF20B7FB
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.192892] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:15.192951] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:B348771F203CD3E3531957F8C31F2C46
+send_md5:B348771F203CD3E3531957F8C31F2C46
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.220601] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:4A6F3718C001ADB37F2937F04E662F19
+send_md5:4A6F3718C001ADB37F2937F04E662F19
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.259335] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:88FF78098B71E8F76DAE653FA8814B4A
+send_md5:88FF78098B71E8F76DAE653FA8814B4A
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.301910] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:15.301946] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:817DA6E35CE4C78274675638170CAF20
+send_md5:817DA6E35CE4C78274675638170CAF20
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.341265] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:E6EF98E54B52EE8AE501CF3D8A80FDC7
+send_md5:E6EF98E54B52EE8AE501CF3D8A80FDC7
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.382030] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:F27270915D4F2CB70CF5BBB9112483C6
+send_md5:F27270915D4F2CB70CF5BBB9112483C6
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.423556] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:15.423591] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:E3F6B9188C9EAE08B51E7F4928DC7590
+send_md5:E3F6B9188C9EAE08B51E7F4928DC7590
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.464788] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:E3F6B9188C9EAE08B51E7F4928DC7590
+send_md5:E3F6B9188C9EAE08B51E7F4928DC7590
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.504740] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:E3F6B9188C9EAE08B51E7F4928DC7590
+send_md5:E3F6B9188C9EAE08B51E7F4928DC7590
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.546394] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:15.546421] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:E3F6B9188C9EAE08B51E7F4928DC7590
+send_md5:E3F6B9188C9EAE08B51E7F4928DC7590
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.591621] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:E3F6B9188C9EAE08B51E7F4928DC7590
+send_md5:E3F6B9188C9EAE08B51E7F4928DC7590
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.628433] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FD903BA199F81A6D756A7705D81B200B
+send_md5:FD903BA199F81A6D756A7705D81B200B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.676589] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:15.676629] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FD903BA199F81A6D756A7705D81B200B
+send_md5:FD903BA199F81A6D756A7705D81B200B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.708869] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FD903BA199F81A6D756A7705D81B200B
+send_md5:FD903BA199F81A6D756A7705D81B200B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.749375] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FD903BA199F81A6D756A7705D81B200B
+send_md5:FD903BA199F81A6D756A7705D81B200B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.790706] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:15.790728] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FD903BA199F81A6D756A7705D81B200B
+send_md5:FD903BA199F81A6D756A7705D81B200B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.829836] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FD903BA199F81A6D756A7705D81B200B
+send_md5:FD903BA199F81A6D756A7705D81B200B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.870395] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FD903BA199F81A6D756A7705D81B200B
+send_md5:FD903BA199F81A6D756A7705D81B200B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.911193] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:15.911224] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FD903BA199F81A6D756A7705D81B200B
+send_md5:FD903BA199F81A6D756A7705D81B200B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.951716] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:FD903BA199F81A6D756A7705D81B200B
+send_md5:FD903BA199F81A6D756A7705D81B200B
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:15.992216] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:A90F2EAAF09267F1829D7652055124A4
+send_md5:A90F2EAAF09267F1829D7652055124A4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:16.048105] SendVideoData ONCE, ret=-1, length=505632, width=734, height:458
+
+[T][ConfService.cpp][291][11083][2020-03-13 14:43:16.048160] send member 2 video data error,ret=-1
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:A90F2EAAF09267F1829D7652055124A4
+send_md5:A90F2EAAF09267F1829D7652055124A4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:16.074779] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:A90F2EAAF09267F1829D7652055124A4
+send_md5:A90F2EAAF09267F1829D7652055124A4
+[T][ConfService.cpp][288][11083][2020-03-13 14:43:16.114971] SendVideoData ONCE, ret=0, length=505632, width=734, height:458
+
+length:505632, width:734, height:458, AVPixelFormat:26
+frame_md5:A90F2EAAF09267F1829D7652055124A4
+se

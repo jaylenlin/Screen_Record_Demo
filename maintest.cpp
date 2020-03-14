@@ -3,6 +3,10 @@
 #include "global.h"
 #include "xgrab.h"
 #include <QDebug>
+#include "md5.h"
+extern "C" {
+#include <libavutil/imgutils.h>
+}
 
 MainTest::MainTest(QWidget *parent) :
     QMainWindow(parent),
@@ -89,59 +93,68 @@ static AVFrame* CreateVideoFrame(unsigned int width, unsigned int height, AVPixe
 
     // get required planes
     unsigned int planes = 0;
-    printf("pixel_format:%d\n", pixel_format);
     size_t linesize[3] = {0}, planesize[3] = {0};
     switch(pixel_format) {
-        case AV_PIX_FMT_YUV444P: {
-            // Y/U/V = 1 byte per pixel
-            planes = 3;
-            linesize[0]  = grow_align16(width); planesize[0] = linesize[0] * height;
-            linesize[1]  = grow_align16(width); planesize[1] = linesize[1] * height;
-            linesize[2]  = grow_align16(width); planesize[2] = linesize[2] * height;
-            break;
-        }
-        case AV_PIX_FMT_YUV422P: {
-            // Y = 1 byte per pixel, U/V = 1 byte per 2x1 pixels
-            assert(width % 2 == 0);
-            planes = 3;
-            linesize[0]  = grow_align16(width    ); planesize[0] = linesize[0] * height;
-            linesize[1]  = grow_align16(width / 2); planesize[1] = linesize[1] * height;
-            linesize[2]  = grow_align16(width / 2); planesize[2] = linesize[2] * height;
-            break;
-        }
-        case AV_PIX_FMT_YUV420P: {
-            // Y = 1 byte per pixel, U/V = 1 byte per 2x2 pixels
-            assert(width % 2 == 0);
-            assert(height % 2 == 0);
-            planes = 3;
-            linesize[0]  = grow_align16(width    ); planesize[0] = linesize[0] * height    ;
-            linesize[1]  = grow_align16(width / 2); planesize[1] = linesize[1] * height / 2;
-            linesize[2]  = grow_align16(width / 2); planesize[2] = linesize[2] * height / 2;
-            break;
-        }
-        case AV_PIX_FMT_NV12: {
-            assert(width % 2 == 0);
-            assert(height % 2 == 0);
-            // planar YUV 4:2:0, 12bpp, 1 plane for Y and 1 plane for the UV components, which are interleaved
-            // Y = 1 byte per pixel, U/V = 1 byte per 2x2 pixels
-            planes = 2;
-            linesize[0]  = grow_align16(width); planesize[0] = linesize[0] * height    ;
-            linesize[1]  = grow_align16(width); planesize[1] = linesize[1] * height / 2;
-            break;
-        }
-        case AV_PIX_FMT_BGRA: {
-            // BGRA = 4 bytes per pixel
-            planes = 1;
-            linesize[0] = grow_align16(width * 4); planesize[0] = linesize[0] * height;
-            break;
-        }
-        case AV_PIX_FMT_BGR24: {
-            // BGR = 3 bytes per pixel
-            planes = 1;
-            linesize[0] = grow_align16(width * 3); planesize[0] = linesize[0] * height;
-            break;
-        }
-        default: assert(false); break;
+    case AV_PIX_FMT_YUV444P: {
+        // Y/U/V = 1 byte per pixel
+        planes = 3;
+        linesize[0]  = grow_align16(width); planesize[0] = linesize[0] * height;
+        linesize[1]  = grow_align16(width); planesize[1] = linesize[1] * height;
+        linesize[2]  = grow_align16(width); planesize[2] = linesize[2] * height;
+        break;
+    }
+    case AV_PIX_FMT_YUV422P: {
+        // Y = 1 byte per pixel, U/V = 1 byte per 2x1 pixels
+        assert(width % 2 == 0);
+        planes = 3;
+        linesize[0]  = grow_align16(width    ); planesize[0] = linesize[0] * height;
+        linesize[1]  = grow_align16(width / 2); planesize[1] = linesize[1] * height;
+        linesize[2]  = grow_align16(width / 2); planesize[2] = linesize[2] * height;
+        break;
+    }
+    case AV_PIX_FMT_YUV420P: {
+        // Y = 1 byte per pixel, U/V = 1 byte per 2x2 pixels
+        assert(width % 2 == 0);
+        assert(height % 2 == 0);
+        planes = 3;
+        linesize[0]  = grow_align16(width    ); planesize[0] = linesize[0] * height    ;
+        linesize[1]  = grow_align16(width / 2); planesize[1] = linesize[1] * height / 2;
+        linesize[2]  = grow_align16(width / 2); planesize[2] = linesize[2] * height / 2;
+        break;
+    }
+    case AV_PIX_FMT_NV12: {
+        assert(width % 2 == 0);
+        assert(height % 2 == 0);
+        // planar YUV 4:2:0, 12bpp, 1 plane for Y and 1 plane for the UV components, which are interleaved
+        // Y = 1 byte per pixel, U/V = 1 byte per 2x2 pixels
+        planes = 2;
+        linesize[0]  = grow_align16(width); planesize[0] = linesize[0] * height    ;
+        linesize[1]  = grow_align16(width); planesize[1] = linesize[1] * height / 2;
+        break;
+    }
+    case AV_PIX_FMT_BGRA: {
+        // BGRA = 4 bytes per pixel
+        planes = 1;
+        linesize[0] = grow_align16(width * 4); planesize[0] = linesize[0] * height;
+        break;
+    }
+    case AV_PIX_FMT_BGR24: {
+        // BGR = 3 bytes per pixel
+        planes = 1;
+        linesize[0] = grow_align16(width * 3); planesize[0] = linesize[0] * height;
+        break;
+    }
+    case AV_PIX_FMT_NV21: {
+        assert(width % 2 == 0);
+        assert(height % 2 == 0);
+        // planar YUV 4:2:0, 12bpp, 1 plane for Y and 1 plane for the VU components, which are interleaved
+        // Y = 1 byte per pixel, U/V = 1 byte per 2x2 pixels
+        planes = 2;
+        linesize[0]  = grow_align16(width); planesize[0] = linesize[0] * height    ;
+        linesize[1]  = grow_align16(width); planesize[1] = linesize[1] * height / 2;
+        break;
+    }
+    default: assert(false); break;
     }
 
     // create the frame
@@ -250,7 +263,7 @@ void MainTest::mousePressEvent(QMouseEvent* event) {
                                     Window child;
                                     // the attributes of the real window only store the *relative* position which is not what we need, so use XTranslateCoordinates again
                                     if(XTranslateCoordinates(QX11Info::display(), real_window, QX11Info::appRootWindow(), 0, 0, &x, &y, &child)
-                                             && XGetWindowAttributes(QX11Info::display(), real_window, &attributes)) {
+                                            && XGetWindowAttributes(QX11Info::display(), real_window, &attributes)) {
 
                                         // finally!
                                         m_select_window_inner_rect = QRect(x, y, attributes.width, attributes.height);
@@ -413,7 +426,45 @@ void MainTest::GrabThread() {
         frame->pts=local_pts;//local_pts;
         local_pts++;
 
-//        printf("linesize:%d,%d, %d,%d\n", frame->linesize[0], frame->linesize[1],frame->linesize[2],frame->linesize[3]);
+//        printf("y:%hhu, u:%hhu\n", frame->data[0][0], frame->data[0][1]);
+        printf("y:%hhu, v:%hhu %hhu %hhu %hhu\n", *(frame->data[0]), frame->data[1][0],frame->data[2][0], frame->data[1][2], frame->data[1][3]);
+
+        MyFrame frame_temp;
+        int length = av_image_get_buffer_size((AVPixelFormat)frame->format,frame->width,frame->height,16);
+        uint8_t *raw_data = new uint8_t[length];
+
+        av_image_copy_to_buffer(raw_data,
+                                length,
+                                frame->data,
+                                frame->linesize,
+                                (AVPixelFormat)frame->format,
+                                frame->width,
+                                frame->height,
+                                16);
+
+//        struct SwsContext *img_convert_ctx;
+//        img_convert_ctx = sws_getContext(frame->width, frame->height, AV_PIX_FMT_NV12,
+//        frame->width, frame->height, AV_PIX_FMT_NV21, SWS_POINT,
+//        NULL, NULL, NULL);
+//        sws_scale(img_convert_ctx, raw_data, frame->linesize,
+//        0, frame->height, outbuf, outlinesize);
+
+//        av_image_copy_to_buffer(raw_data,
+//                                length,
+//                                frame->data,
+//                                frame->linesize,
+//                                (AVPixelFormat)frame->format,
+//                                frame->width,
+//                                frame->height,
+//                                16);
+        frame_temp.data = raw_data;
+        frame_temp.length = length;
+        frame_temp.width = frame->width;
+        frame_temp.height = frame->height;
+        frame_temp.format = frame->format;
+        printf("length:%d, width:%d, height:%d, AVPixelFormat:%d\n", frame_temp.length, frame_temp.width,frame_temp.height, frame_temp.format );
+        printf("frame_md5:%s\n", mymd5(raw_data, length).c_str());
+        m_frame_queue.push(frame_temp);
 
         //badly preview for test
         uint8_t *previewer = x11->Forpreview();
@@ -422,28 +473,6 @@ void MainTest::GrabThread() {
             QImage img((uchar *)previewer, out_size.width(), out_size.height(), x11->m_image_stride, QImage::Format_RGB32);
             ui->label_2->setPixmap(QPixmap::fromImage(img));
         }
-
-//        MyFrame frame_temp;
-//        uint8_t *raw_data = new uint8_t[totalsize];
-//        int pos = 0;
-//        for( int i = 0; i < 3 ; ++i )
-//        {
-//            int n =  frame->linesize[i]*frame->height;
-//            if( i> 0){
-//                n/=2;
-//            }
-//            printf("totalsize:%d, i:%d, pos:%d, %d\n", totalsize,i, pos, n);
-//            memcpy(raw_data + pos, frame->data[i], n);
-//            pos += n;
-//        }
-
-//        frame_temp.data = raw_data;
-//        frame_temp.length = totalsize;
-//        frame_temp.width = frame->width;
-//        frame_temp.height = frame->height;
-//        frame_temp.format = frame->format;
-//        printf("length:%d, width:%d, height:%d, format:%d\n", frame_temp.length, frame_temp.width,frame_temp.height, frame_temp.format );
-//        m_frame_queue.push(frame_temp);
 
         video_encoder->EncodeFrame(frame);
 

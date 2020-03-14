@@ -7,6 +7,8 @@
 #include <google/protobuf/message.h>
 #include <chrono>
 #include <sstream>
+#include "md5.h"
+
 using namespace wxvoipsdk;
 
 const char *format_time()
@@ -105,7 +107,7 @@ void ConfCallService::Uninit()
 int ConfCallService::Init(const std::string &deviceId, const std::string &groupId, const std::string &sessionKey, flame_queue *flamequeue)
 {
     m_groupId = groupId;
-    m_flame_queue = flamequeue;
+    m_frame_queue = flamequeue;
     m_bStudent = deviceId == "student";
 
     uint32_t audioFlag = 0;
@@ -279,9 +281,10 @@ void *ConfCallService::VideoSendThreadFunc(void *pData)
 
         while (memberList.member_list_size() > 1)
         {
-            pThis->m_flame_queue->wait_and_pop(frame);
+            pThis->m_frame_queue->wait_and_pop(frame);
 
-            int ret = pThis->m_pService->SendVideoData(frame.data, frame.length, frame.width, frame.height, frame.format);
+            printf("send_md5:%s\n", mymd5(frame.data, frame.length).c_str());
+            int ret = pThis->m_pService->SendVideoData(frame.data, frame.length, frame.width, frame.height, VFMT_NV21);
             ctrace("SendVideoData ONCE, ret=%d, length=%d, width=%d, height:%d\n",  ret, frame.length, frame.width, frame.height);
             if (ret < 0)
             {

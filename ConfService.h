@@ -56,7 +56,7 @@ protected:
     std::thread m_hThreadSendVideo;
     std::thread m_hThreadRecvVideo;
 
-    flame_queue *m_flame_queue;
+    flame_queue *m_frame_queue;
 
 };
 }

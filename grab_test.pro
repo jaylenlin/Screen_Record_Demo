@@ -20,7 +20,8 @@ SOURCES += main.cpp\
         AV/Output/VideoEncoder.cpp\
         ConfService.cpp\
         H264FileUtils.cpp\
-        include/wxconfsdk.pb.cc
+        include/wxconfsdk.pb.cc \
+        md5.cpp
 
 HEADERS  += maintest.h \
         md5.h \
